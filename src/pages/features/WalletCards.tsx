@@ -79,7 +79,7 @@ const WalletCards = () => {
                     </div>
                 </div>
 
-                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-16 text-center">
+                <div className="bg-[#232323] text-white rounded-3xl p-8 md:p-16 text-center">
                     <h2 className="text-3xl font-bold mb-6">Stop building apps nobody downloads.</h2>
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
                         Switch to Wallet Loyalty Cards and engage your customers where they actually pay attention.

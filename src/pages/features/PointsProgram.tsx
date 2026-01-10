@@ -51,7 +51,7 @@ const PointsProgram = () => {
                     </div>
                 </div>
 
-                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 text-center">
+                <div className="bg-[#232323] text-white rounded-3xl p-8 md:p-12 text-center">
                     <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to launch your points program?</h2>
                     <Button variant="primary" className="bg-white text-slate-900 hover:bg-slate-100">
                         Get Started <ArrowRight className="w-4 h-4 ml-2" />

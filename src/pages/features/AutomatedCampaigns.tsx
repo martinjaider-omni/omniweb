@@ -37,7 +37,7 @@ const AutomatedCampaigns = () => {
                     </div>
                 </div>
 
-                <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12">
+                <div className="bg-[#232323] text-white rounded-3xl p-8 md:p-12">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">Real-Time Orchestration</h2>

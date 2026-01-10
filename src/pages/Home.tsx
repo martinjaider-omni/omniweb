@@ -5,6 +5,7 @@ import FeatureTabs from '../components/FeatureTabs';
 import BentoGrid from '../components/BentoGrid';
 import CTASection from '../components/CTASection';
 import Testimonials from '../components/Testimonials';
+import IntegrationsSection from '../components/IntegrationsSection';
 
 const Home: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
       <LogoTicker />
       <FeatureTabs />
       <BentoGrid />
+      <IntegrationsSection />
       <Testimonials />
       <CTASection />
     </>

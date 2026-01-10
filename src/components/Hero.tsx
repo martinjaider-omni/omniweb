@@ -1,5 +1,7 @@
 import React from 'react';
-import { ArrowRight, Check, Apple, Smartphone } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Check, ArrowRight, Apple, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 
 const Hero: React.FC = () => {
@@ -27,9 +29,11 @@ const Hero: React.FC = () => {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Button variant="primary" size="lg" className="rounded-xl px-8">
-            Start for free
-          </Button>
+          <Link to="/signup">
+            <Button variant="primary" size="lg" className="rounded-xl px-8">
+              Start for free
+            </Button>
+          </Link>
           <Button variant="secondary" size="lg" className="rounded-xl px-8">
             Talk to sales
           </Button>

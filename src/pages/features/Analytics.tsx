@@ -52,7 +52,7 @@ const Analytics: React.FC = () => {
                 </div>
 
                 <div className="flex gap-4">
-                    <Link to="/demo">
+                    <Link to="/signup">
                         <Button size="lg">Start for free</Button>
                     </Link>
                     <Link to="/contact">

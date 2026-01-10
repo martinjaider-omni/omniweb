@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Wallet, CreditCard, Users, Gift, Bell, Dices, ShoppingBag, BarChart3, Map, Zap, Briefcase, Handshake, Headphones } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -8,6 +8,18 @@ import logoUrl from '../assets/logo.png';
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+const MenuLink = ({ to, icon, title, desc }: { to: string, icon: React.ReactNode, title: string, desc: string }) => (
+  <Link to={to} className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+    <div className="text-slate-400 group-hover/item:text-slate-900 transition-colors mt-0.5">
+      {icon}
+    </div>
+    <div>
+      <div className="text-sm font-semibold text-slate-900">{title}</div>
+      <div className="text-xs text-slate-500 line-clamp-1">{desc}</div>
+    </div>
+  </Link>
+);
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +43,7 @@ const Navbar: React.FC = () => {
     { name: 'Platform', path: '/features' },
     { name: 'Solutions', path: '/solutions' },
     { name: 'Pricing', path: '/pricing' },
-    { name: 'Company', path: '/company' },
+    { name: 'Resources', path: '/company' },
   ];
 
   const isHome = location.pathname === '/';
@@ -53,21 +65,186 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8 h-full">
+            <div className="relative group h-full flex items-center">
+              <button
                 className={cn(
-                  "text-sm font-medium transition-colors",
-                  location.pathname === link.path
+                  "text-sm font-medium transition-colors flex items-center gap-1 my-auto outline-none",
+                  location.pathname.startsWith('/features')
                     ? "text-slate-900"
-                    : "text-slate-500 hover:text-slate-900"
+                    : "text-slate-500 hover:text-slate-900 group-hover:text-slate-900"
                 )}
               >
-                {link.name}
-              </Link>
-            ))}
+                Platform <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+              </button>
+
+              {/* Mega Menu Dropdown */}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-[800px]">
+                <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 grid grid-cols-3 gap-8">
+
+                  {/* Column 1: Core Platform */}
+                  <div>
+                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
+                      Core Platform
+                    </div>
+                    <div className="space-y-1">
+                      <MenuLink
+                        to="/features/wallet-cards"
+                        icon={<Wallet size={18} />}
+                        title="Wallet Cards"
+                        desc="Native digital passes"
+                      />
+                      <MenuLink
+                        to="/features/points-program"
+                        icon={<CreditCard size={18} />}
+                        title="Points Program"
+                        desc="Earn & burn rewards"
+                      />
+                      <MenuLink
+                        to="/features/customer-tiers"
+                        icon={<Users size={18} />}
+                        title="Customer Tiers"
+                        desc="VIP segmentation"
+                      />
+                      <MenuLink
+                        to="/features/gift-cards"
+                        icon={<Gift size={18} />}
+                        title="Gift Cards"
+                        desc="Prepaid digital cards"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Column 2: Engagement */}
+                  <div>
+                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
+                      Engagement
+                    </div>
+                    <div className="space-y-1">
+                      <MenuLink
+                        to="/features/push-notifications"
+                        icon={<Bell size={18} />}
+                        title="Push Notifications"
+                        desc="Direct mobile messaging"
+                      />
+                      <MenuLink
+                        to="/features/gamification"
+                        icon={<Dices size={18} />}
+                        title="Gamification"
+                        desc="Spin-to-win & games"
+                      />
+                      <MenuLink
+                        to="/features/loyalty-market"
+                        icon={<ShoppingBag size={18} />}
+                        title="Loyalty Market"
+                        desc="Rewards catalog"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Column 3: Intelligence */}
+                  <div>
+                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
+                      Intelligence
+                    </div>
+                    <div className="space-y-1">
+                      <MenuLink
+                        to="/features/analytics"
+                        icon={<BarChart3 size={18} />}
+                        title="Analytics"
+                        desc="Real-time ROI insights"
+                      />
+                      <MenuLink
+                        to="/features/customer-journey"
+                        icon={<Map size={18} />}
+                        title="Journey Builder"
+                        desc="Visual automation flows"
+                      />
+                      <MenuLink
+                        to="/features/automated-campaigns"
+                        icon={<Zap size={18} />}
+                        title="Automated Campaigns"
+                        desc="Trigger-based marketing"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <Link to="/solutions" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Solutions</Link>
+            <Link to="/pricing" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Pricing</Link>
+
+            {/* Company Mega Menu */}
+            <div className="relative group h-full flex items-center">
+              <button
+                className={cn(
+                  "text-sm font-medium transition-colors flex items-center gap-1 my-auto outline-none",
+                  location.pathname === '/company'
+                    ? "text-slate-900"
+                    : "text-slate-500 hover:text-slate-900 group-hover:text-slate-900"
+                )}
+              >
+                Company <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+              </button>
+
+              <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-[500px]">
+                <div className="bg-white rounded-2xl shadow-xl border border-slate-100 flex overflow-hidden">
+
+                  {/* Left Column (Main Links) */}
+                  <div className="p-4 flex-1 space-y-1">
+                    <MenuLink
+                      to="/company"
+                      icon={<Users size={18} />}
+                      title="About us"
+                      desc="Our mission & team"
+                    />
+                    <MenuLink
+                      to="/careers"
+                      icon={<Briefcase size={18} />}
+                      title="Careers"
+                      desc="We are hiring"
+                    />
+                    <MenuLink
+                      to="/partners"
+                      icon={<Handshake size={18} />}
+                      title="Partners"
+                      desc="Grow with us"
+                    />
+                    <MenuLink
+                      to="/contact"
+                      icon={<Headphones size={18} />}
+                      title="Contact"
+                      desc="Get in touch"
+                    />
+                  </div>
+
+                  {/* Right Column (Resources) */}
+                  <div className="bg-slate-50 p-6 w-48 border-l border-slate-100">
+                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
+                      Resources
+                    </div>
+                    <ul className="space-y-3">
+                      <li>
+                        <a href="#" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+                      </li>
+                      <li>
+                        <Link to="/changelog" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Changelog</Link>
+                      </li>
+                      <li>
+                        <Link to="/help" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Help Center</Link>
+                      </li>
+                      <li>
+                        <Link to="/community" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Community</Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Actions */}
@@ -79,7 +256,7 @@ const Navbar: React.FC = () => {
               Sign in
             </Link>
             <Link
-              to="/demo"
+              to="/signup"
               className="bg-[#255664] hover:bg-[#1e4652] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-slate-900/20 active:scale-95"
             >
               Start for free
@@ -121,7 +298,7 @@ const Navbar: React.FC = () => {
             Sign in
           </Link>
           <Link
-            to="/demo"
+            to="/signup"
             className="bg-[#255664] text-white text-center font-medium py-3 rounded-lg hover:bg-[#1e4652]"
           >
             Start for free
