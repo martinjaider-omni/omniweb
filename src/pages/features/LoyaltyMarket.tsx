@@ -1,16 +1,17 @@
-
 import React from 'react';
 import { ArrowRight, ShoppingBag, Gift, Zap } from 'lucide-react';
 import Button from '../../components/ui/Button';
+import { useTranslation } from 'react-i18next';
 
 const LoyaltyMarket = () => {
+    const { t } = useTranslation();
     return (
         <div className="pt-24 pb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-6">Loyalty Market</h1>
+                    <h1 className="text-4xl font-bold text-slate-900 mb-6">{t('featureDetail.loyaltyMarket.title')}</h1>
                     <p className="text-xl text-slate-600">
-                        An out-of-the-box rewards marketplace. Activate a complete loyalty program from day one without operational complexity.
+                        {t('featureDetail.loyaltyMarket.description')}
                     </p>
                 </div>
 
@@ -21,9 +22,9 @@ const LoyaltyMarket = () => {
                                 <ShoppingBag className="w-5 h-5" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-slate-900 mb-2">Diverse Reward Types</h3>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">{t('featureDetail.loyaltyMarket.diverseTitle')}</h3>
                                 <p className="text-slate-600">
-                                    Offer physical products, digital goods, coupon pools for eCommerce, and combine your own prizes with third-party rewards.
+                                    {t('featureDetail.loyaltyMarket.diverseDesc')}
                                 </p>
                             </div>
                         </div>
@@ -33,9 +34,9 @@ const LoyaltyMarket = () => {
                                 <Gift className="w-5 h-5" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-slate-900 mb-2">Leading Brands Integrated</h3>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">{t('featureDetail.loyaltyMarket.brandsTitle')}</h3>
                                 <p className="text-slate-600">
-                                    Offer instant digital gift cards from Amazon, Decathlon, El Corte Inglés, Repsol, Adidas, and 30+ more.
+                                    {t('featureDetail.loyaltyMarket.brandsDesc')}
                                 </p>
                             </div>
                         </div>
@@ -45,25 +46,24 @@ const LoyaltyMarket = () => {
                                 <Zap className="w-5 h-5" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-slate-900 mb-2">Automated Fulfillment</h3>
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">{t('featureDetail.loyaltyMarket.fulfillmentTitle')}</h3>
                                 <p className="text-slate-600">
-                                    Zero friction. Points are redeemed, rewards generated in real-time, and delivered immediately (digitally or via defined channels).
+                                    {t('featureDetail.loyaltyMarket.fulfillmentDesc')}
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="bg-slate-100 rounded-2xl p-8 flex items-center justify-center">
-                        {/* Abstract visual representation of a marketplace */}
                         <div className="text-center">
                             <div className="inline-block bg-white p-4 rounded-xl shadow-lg mb-4">
-                                <div className="font-bold text-slate-900 text-lg">Redeem Points</div>
-                                <div className="text-slate-500 text-sm">Select your reward</div>
+                                <div className="font-bold text-slate-900 text-lg">{t('featureDetail.loyaltyMarket.visualRedeem')}</div>
+                                <div className="text-slate-500 text-sm">{t('featureDetail.loyaltyMarket.visualSelect')}</div>
                             </div>
                             <div className="text-slate-400 mb-4">↓</div>
                             <div className="inline-block bg-emerald-500 text-white p-4 rounded-xl shadow-lg">
-                                <div className="font-bold text-lg">Instant Reward</div>
-                                <div className="text-emerald-100 text-sm">Sent to your Digital Wallet</div>
+                                <div className="font-bold text-lg">{t('featureDetail.loyaltyMarket.visualInstant')}</div>
+                                <div className="text-emerald-100 text-sm">{t('featureDetail.loyaltyMarket.visualSent')}</div>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ const LoyaltyMarket = () => {
 
                 <div className="text-center">
                     <Button variant="primary">
-                        Explore the Loyalty Market <ArrowRight className="w-4 h-4 ml-2" />
+                        {t('featureDetail.loyaltyMarket.ctaButton')} <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                 </div>
             </div>

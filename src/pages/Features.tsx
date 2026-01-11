@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
     Wallet,
     Gift,
@@ -20,87 +21,88 @@ import {
 } from 'lucide-react';
 
 const Features: React.FC = () => {
+    const { t } = useTranslation();
     const features = [
         // Core Features
         {
-            category: 'Core',
+            category: t('features.sections.core.title'),
             items: [
                 {
                     icon: Award,
-                    title: 'Points Program',
-                    description: 'Reward customers with points for every purchase and action they take.',
+                    title: t('features.items.points.title'),
+                    description: t('features.items.points.desc'),
                     link: '/features/points-program'
                 },
                 {
                     icon: Wallet,
-                    title: 'Wallet Cards',
-                    description: 'Create beautiful digital cards for Apple Wallet and Google Wallet.',
+                    title: t('features.items.wallet.title'),
+                    description: t('features.items.wallet.desc'),
                     link: '/features/wallet-cards'
                 },
                 {
                     icon: Users,
-                    title: 'Referral Program',
-                    description: 'Turn customers into advocates with automated referral rewards.',
+                    title: t('features.items.referral.title'),
+                    description: t('features.items.referral.desc'),
                     link: '/features/referral-program'
                 },
                 {
                     icon: Mail,
-                    title: 'Push Notifications',
-                    description: 'Send unlimited push notifications directly to customers\' wallets.',
+                    title: t('features.items.push.title'),
+                    description: t('features.items.push.desc'),
                     link: '/features/push-notifications'
                 }
             ]
         },
         // Advanced Features
         {
-            category: 'Advanced',
+            category: t('features.sections.advanced.title'),
             items: [
                 {
                     icon: Target,
-                    title: 'Customer Tiers',
-                    description: 'Create VIP tiers and reward your most loyal customers differently.',
+                    title: t('features.items.tiers.title'),
+                    description: t('features.items.tiers.desc'),
                     link: '/features/customer-tiers'
                 },
                 {
                     icon: Zap,
-                    title: 'Automated Campaigns',
-                    description: 'Set up automated marketing campaigns based on customer behavior.',
+                    title: t('features.items.campaigns.title'),
+                    description: t('features.items.campaigns.desc'),
                     link: '/features/automated-campaigns'
                 },
                 {
                     icon: Workflow,
-                    title: 'Workflows',
-                    description: 'Build complex automation workflows with our visual builder.',
+                    title: t('features.items.workflows.title'),
+                    description: t('features.items.workflows.desc'),
                     link: '/features/workflows'
                 },
                 {
                     icon: Map,
-                    title: 'Customer Journeys',
-                    description: 'Map and optimize every touchpoint in your customer experience.',
+                    title: t('features.items.journeys.title'),
+                    description: t('features.items.journeys.desc'),
                     link: '/features/customer-journey'
                 },
                 {
                     icon: Gamepad2,
-                    title: 'Gamification',
-                    description: 'Add game mechanics to boost engagement and retention.',
+                    title: t('features.items.gamification.title'),
+                    description: t('features.items.gamification.desc'),
                     link: '/features/gamification'
                 },
                 {
                     icon: ShoppingBag,
-                    title: 'Rewards Marketplace',
-                    description: 'Let customers redeem points for products, discounts, and experiences.',
+                    title: t('features.items.marketplace.title'),
+                    description: t('features.items.marketplace.desc'),
                     link: '/features/loyalty-market'
                 },
                 {
                     icon: Gift,
-                    title: 'Digital Gift Cards',
-                    description: 'Sell and manage digital gift cards directly in the wallet.',
+                    title: t('features.items.giftcards.title'),
+                    description: t('features.items.giftcards.desc'),
                     link: '/features/gift-cards'
                 },
                 {
                     icon: BarChart3,
-                    title: 'Advanced Analytics',
-                    description: 'Deep insights into customer behavior, ROI, and program performance.',
+                    title: t('features.items.analytics.title'),
+                    description: t('features.items.analytics.desc'),
                     link: '/features/analytics'
                 }
             ]
@@ -118,20 +120,19 @@ const Features: React.FC = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-slate-50 text-sm font-medium text-slate-600 mb-6">
                     <Sparkles className="w-4 h-4 text-[#255664]" />
-                    All-in-one loyalty platform
+                    {t('features.hero.badge')}
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6">
-                    Everything you need to
+                    {t('features.hero.title')}
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#255664] to-emerald-500">
-                        master digital loyalty
+                        {t('features.hero.subtitle')}
                     </span>
                 </h1>
 
                 <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-                    Omniwallet provides the complete infrastructure to create, manage, and scale
-                    Apple Wallet and Google Wallet loyalty programs that customers actually use.
+                    {t('features.hero.description')}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,14 +140,14 @@ const Features: React.FC = () => {
                         to="/signup"
                         className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#255664] text-white rounded-xl font-semibold hover:bg-[#1e4652] transition-all shadow-lg hover:shadow-xl hover:scale-105"
                     >
-                        Start for free
+                        {t('features.hero.startFree')}
                         <ArrowRight className="w-5 h-5" />
                     </Link>
                     <Link
                         to="/pricing"
                         className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 border-2 border-slate-200 rounded-xl font-semibold hover:border-slate-300 hover:bg-slate-50 transition-all"
                     >
-                        View pricing
+                        {t('features.hero.viewPricing')}
                     </Link>
                 </div>
             </motion.div>
@@ -156,12 +157,12 @@ const Features: React.FC = () => {
                 <div key={section.category} className={sectionIndex > 0 ? 'mt-24' : ''}>
                     <div className="mb-12">
                         <h2 className="text-3xl font-bold text-slate-900 mb-3">
-                            {section.category} Features
+                            {section.category}
                         </h2>
                         <p className="text-lg text-slate-600">
-                            {section.category === 'Core'
-                                ? 'Essential tools included in all plans to build a powerful loyalty program'
-                                : 'Advanced capabilities to take your loyalty program to the next level'
+                            {sectionIndex === 0
+                                ? t('features.sections.core.description')
+                                : t('features.sections.advanced.description')
                             }
                         </p>
                     </div>
@@ -196,7 +197,7 @@ const Features: React.FC = () => {
 
                                             {/* Arrow */}
                                             <div className="mt-4 flex items-center text-sm font-medium text-[#255664] group-hover:gap-2 transition-all">
-                                                Learn more
+                                                {t('features.learnMore')}
                                                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                             </div>
                                         </div>
@@ -220,24 +221,24 @@ const Features: React.FC = () => {
 
                 <div className="relative z-10">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to transform your loyalty program?
+                        {t('features.ready.title')}
                     </h2>
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                        Join thousands of businesses using Omniwallet to build lasting customer relationships.
+                        {t('features.ready.subtitle')}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             to="/signup"
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-xl font-semibold hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl hover:scale-105"
                         >
-                            Start for free
+                            {t('cta.startFree')}
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                         <Link
                             to="/contact"
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white/20 rounded-xl font-semibold hover:border-white/40 hover:bg-white/10 transition-all"
                         >
-                            Talk to sales
+                            {t('cta.talkSales')}
                         </Link>
                     </div>
                 </div>

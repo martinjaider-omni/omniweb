@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Wallet, CreditCard, Users, Gift, Bell, Dices, ShoppingBag, BarChart3, Map, Zap, Briefcase, Handshake, Headphones } from 'lucide-react';
+import { Menu, X, ChevronDown, Wallet, CreditCard, Users, Gift, Bell, Dices, ShoppingBag, BarChart3, Map, Zap, Briefcase, Handshake, Headphones, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import logoUrl from '../assets/logo.png';
@@ -22,9 +23,15 @@ const MenuLink = ({ to, icon, title, desc }: { to: string, icon: React.ReactNode
 );
 
 const Navbar: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +47,10 @@ const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: 'Platform', path: '/features' },
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Resources', path: '/company' },
+    { name: t('nav.platform'), path: '/features' },
+    { name: t('nav.solutions'), path: '/solutions' },
+    { name: t('nav.pricing'), path: '/pricing' },
+    { name: t('nav.resources'), path: '/company' },
   ];
 
   const isHome = location.pathname === '/';
@@ -76,7 +83,7 @@ const Navbar: React.FC = () => {
                     : "text-slate-500 hover:text-slate-900 group-hover:text-slate-900"
                 )}
               >
-                Platform <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+                {t('nav.platform')} <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
               </button>
 
               {/* Mega Menu Dropdown */}
@@ -174,8 +181,8 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/solutions" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Solutions</Link>
-            <Link to="/pricing" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Pricing</Link>
+            <Link to="/solutions" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">{t('nav.solutions')}</Link>
+            <Link to="/pricing" className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">{t('nav.pricing')}</Link>
 
             {/* Company Mega Menu */}
             <div className="relative group h-full flex items-center">
@@ -187,7 +194,7 @@ const Navbar: React.FC = () => {
                     : "text-slate-500 hover:text-slate-900 group-hover:text-slate-900"
                 )}
               >
-                Company <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+                {t('nav.resources')} <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
               </button>
 
               <div className="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-[500px]">
@@ -249,17 +256,26 @@ const Navbar: React.FC = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center gap-3">
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-all border border-transparent hover:border-slate-200"
+            >
+              <Globe size={14} />
+              {i18n.language === 'es' ? 'EN' : 'ES'}
+            </button>
+
             <Link
               to="/login"
               className="text-sm font-medium text-slate-600 hover:text-slate-900 px-4 py-2"
             >
-              Sign in
+              {t('nav.login')}
             </Link>
             <Link
               to="/signup"
               className="bg-[#255664] hover:bg-[#1e4652] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all hover:shadow-lg hover:shadow-slate-900/20 active:scale-95"
             >
-              Start for free
+              {t('nav.startFree')}
             </Link>
           </div>
 

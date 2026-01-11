@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Info, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Pricing: React.FC = () => {
+    const { t } = useTranslation();
     const [activities, setActivities] = React.useState(1500);
     const [selectedPlan, setSelectedPlan] = React.useState<'starter' | 'plus' | 'advanced'>('plus');
 
@@ -112,34 +114,34 @@ const Pricing: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-center mb-16"
             >
-                <span className="text-slate-600 font-medium tracking-wide uppercase text-sm">Pricing</span>
+                <span className="text-slate-600 font-medium tracking-wide uppercase text-sm">{t('pricing.hero.badge')}</span>
                 <h1 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-                    Plans that scale with you
+                    {t('pricing.hero.title')}
                 </h1>
                 <p className="mt-4 text-xl text-slate-600 max-w-2xl mx-auto">
-                    The first 100 activities per month are always free. No credit card required.
+                    {t('pricing.hero.description')}
                 </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-20">
                 {/* Starter */}
                 <div className="rounded-2xl p-6 border border-slate-200 flex flex-col bg-white hover:border-slate-300 transition-colors">
-                    <h3 className="text-xl font-bold text-slate-900">Starter</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{t('pricing.plans.starter.name')}</h3>
                     <div className="mt-2 mb-4">
                         <span className="text-4xl font-bold text-slate-900">39€</span>
-                        <span className="text-slate-500">/mo</span>
+                        <span className="text-slate-500">{t('pricing.labels.mo')}</span>
                     </div>
-                    <p className="text-sm text-slate-500 mb-6 h-10">Ideal for small businesses starting out.</p>
+                    <p className="text-sm text-slate-500 mb-6 h-10">{t('pricing.plans.starter.desc')}</p>
 
                     <a href="/signup" className="block w-full py-2.5 px-4 bg-white border border-slate-200 rounded-xl text-center font-medium text-slate-900 hover:bg-slate-50 transition-colors mb-8">
-                        Start for free
+                        {t('pricing.labels.startFree')}
                     </a>
 
                     <ul className="space-y-3 flex-grow">
                         {[
-                            "Points Program",
-                            "Wallet Cards",
-                            "Referral Program",
+                            t('features.items.points.title'),
+                            t('features.items.wallet.title'),
+                            t('features.items.referral.title'),
                             "Unlimited Push Notif.",
                             "Customizable Emails",
                             "Unlimited Integrations",
@@ -157,23 +159,23 @@ const Pricing: React.FC = () => {
                 {/* Plus */}
                 <div className="rounded-2xl p-6 border-2 border-[#255664] shadow-xl flex flex-col bg-white text-slate-900 relative overflow-hidden">
                     <div className="absolute top-0 right-0 bg-[#255664] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                        Popular
+                        {t('pricing.labels.popular')}
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900">Plus</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{t('pricing.plans.plus.name')}</h3>
                     <div className="mt-2 mb-4">
                         <span className="text-4xl font-bold text-slate-900">149€</span>
-                        <span className="text-slate-500">/mo</span>
+                        <span className="text-slate-500">{t('pricing.labels.mo')}</span>
                     </div>
-                    <p className="text-sm text-slate-500 mb-6 h-10">For growing businesses needing structure.</p>
+                    <p className="text-sm text-slate-500 mb-6 h-10">{t('pricing.plans.plus.desc')}</p>
 
                     <a href="/signup" className="block w-full py-2.5 px-4 bg-[#255664] border border-transparent rounded-xl text-center font-medium text-white hover:bg-[#1e4652] transition-colors mb-8">
-                        Start for free
+                        {t('pricing.labels.startFree')}
                     </a>
 
                     <ul className="space-y-3 flex-grow">
                         {[
-                            "Everything in Starter, plus:",
-                            "Customer Tiers",
+                            t('pricing.labels.everythingIn', { plan: 'Starter' }),
+                            t('features.items.tiers.title'),
                             "Points Expiration",
                             "Points Blocking",
                             "Analytics Plus"
@@ -188,26 +190,26 @@ const Pricing: React.FC = () => {
 
                 {/* Advanced */}
                 <div className="rounded-2xl p-6 border border-slate-200 flex flex-col bg-white hover:border-slate-300 transition-colors">
-                    <h3 className="text-xl font-bold text-slate-900">Advanced</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{t('pricing.plans.advanced.name')}</h3>
                     <div className="mt-2 mb-4">
                         <span className="text-4xl font-bold text-slate-900">249€</span>
-                        <span className="text-slate-500">/mo</span>
+                        <span className="text-slate-500">{t('pricing.labels.mo')}</span>
                     </div>
-                    <p className="text-sm text-slate-500 mb-6 h-10">Maximum power for established brands.</p>
+                    <p className="text-sm text-slate-500 mb-6 h-10">{t('pricing.plans.advanced.desc')}</p>
 
                     <a href="/signup" className="block w-full py-2.5 px-4 bg-white border border-slate-200 rounded-xl text-center font-medium text-slate-900 hover:bg-slate-50 transition-colors mb-8">
-                        Start for free
+                        {t('pricing.labels.startFree')}
                     </a>
 
                     <ul className="space-y-3 flex-grow">
                         {[
-                            "Everything in Plus, plus:",
-                            "Automated Campaigns",
-                            "Workflows",
-                            "Customer Journeys",
-                            "Gamification",
-                            "Rewards Marketplace",
-                            "Digital Gift Cards",
+                            t('pricing.labels.everythingIn', { plan: 'Plus' }),
+                            t('features.items.campaigns.title'),
+                            t('features.items.workflows.title'),
+                            t('features.items.journeys.title'),
+                            t('features.items.gamification.title'),
+                            t('features.items.marketplace.title'),
+                            t('features.items.giftcards.title'),
                             "Analytics Advanced"
                         ].map((feature, i) => (
                             <li key={i} className="flex items-start gap-3">
@@ -220,14 +222,14 @@ const Pricing: React.FC = () => {
 
                 {/* Enterprise */}
                 <div className="rounded-2xl p-6 border border-slate-100 flex flex-col bg-slate-50 hover:border-slate-200 transition-colors">
-                    <h3 className="text-xl font-bold text-slate-900">Enterprise</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{t('pricing.plans.enterprise.name')}</h3>
                     <div className="mt-2 mb-4">
-                        <span className="text-4xl font-bold text-slate-900">Custom</span>
+                        <span className="text-4xl font-bold text-slate-900">{t('pricing.plans.enterprise.price')}</span>
                     </div>
-                    <p className="text-sm text-slate-500 mb-6 h-10">For large organizations with custom needs.</p>
+                    <p className="text-sm text-slate-500 mb-6 h-10">{t('pricing.plans.enterprise.desc')}</p>
 
                     <a href="https://www.omniwallet.net/contacto?plan=enterprise" target="_blank" rel="noopener noreferrer" className="block w-full py-2.5 px-4 bg-slate-200 border border-transparent rounded-xl text-center font-medium text-slate-900 hover:bg-slate-300 transition-colors mb-8">
-                        Contact Sales
+                        {t('cta.talkSales')}
                     </a>
 
                     <ul className="space-y-3 flex-grow">
@@ -253,9 +255,9 @@ const Pricing: React.FC = () => {
 
                     {/* Left Column: Pricing Tiers Visualization */}
                     <div className="p-8 md:p-12 bg-gradient-to-br from-slate-50 to-white">
-                        <h3 className="text-2xl font-bold text-slate-900 mb-3">Price per activity</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-3">{t('pricing.calculator.pricePerActivity')}</h3>
                         <p className="text-slate-600 mb-10 text-sm leading-relaxed">
-                            The first 100 activities are free. From 101 to 250 you only pay the plan price. From 251 onwards, the cost per activity is added.
+                            {t('pricing.calculator.pricePerActivityDesc')}
                         </p>
 
                         <div className="space-y-4">
@@ -295,14 +297,14 @@ const Pricing: React.FC = () => {
                     {/* Right Column: Calculator */}
                     <div className="p-8 md:p-12 bg-white">
                         <div className="text-center mb-10">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-2">Pricing Calculator</h3>
-                            <p className="text-slate-500 text-sm">Estimate your monthly cost based on volume</p>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-2">{t('pricing.calculator.title')}</h3>
+                            <p className="text-slate-500 text-sm">{t('pricing.calculator.subtitle')}</p>
                         </div>
 
                         <div className="space-y-6 max-w-md mx-auto">
                             {/* Plan Selector */}
                             <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-3">Select Plan</label>
+                                <label className="block text-sm font-semibold text-slate-700 mb-3">{t('pricing.calculator.selectPlan')}</label>
                                 <div className="grid grid-cols-3 gap-2 p-1.5 bg-slate-100 rounded-xl">
                                     {(['starter', 'plus', 'advanced'] as const).map((plan) => (
                                         <button
@@ -321,7 +323,7 @@ const Pricing: React.FC = () => {
 
                             {/* Activities Input */}
                             <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-3">Monthly Activities</label>
+                                <label className="block text-sm font-semibold text-slate-700 mb-3">{t('pricing.calculator.monthlyActivities')}</label>
                                 <input
                                     type="number"
                                     value={activities}
@@ -330,7 +332,7 @@ const Pricing: React.FC = () => {
                                     className="w-full text-2xl font-bold border-2 border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-[#255664] focus:border-[#255664] outline-none transition-all hover:border-slate-300"
                                     placeholder="1500"
                                 />
-                                <p className="text-xs text-slate-400 mt-2">Number of transactions/sales per month (max 50,000)</p>
+                                <p className="text-xs text-slate-400 mt-2">{t('pricing.calculator.activitiesDesc')}</p>
                             </div>
 
                             {/* Enterprise Notice for >50k */}
@@ -339,9 +341,9 @@ const Pricing: React.FC = () => {
                                     <div className="flex items-start gap-3 mb-4">
                                         <Mail className="w-6 h-6 text-emerald-400 flex-shrink-0" />
                                         <div>
-                                            <h4 className="font-bold text-lg mb-1">Enterprise Volume</h4>
+                                            <h4 className="font-bold text-lg mb-1">{t('pricing.calculator.enterpriseVolume')}</h4>
                                             <p className="text-sm text-slate-300">
-                                                For volumes over 50,000 activities, we offer custom Enterprise plans with dedicated support and pricing.
+                                                {t('pricing.calculator.enterpriseDesc')}
                                             </p>
                                         </div>
                                     </div>
@@ -351,7 +353,7 @@ const Pricing: React.FC = () => {
                                         rel="noopener noreferrer"
                                         className="block w-full py-3 bg-white text-slate-900 rounded-xl font-bold text-center hover:bg-slate-100 transition-colors"
                                     >
-                                        Contact Sales
+                                        {t('cta.talkSales')}
                                     </a>
                                 </div>
                             )}

@@ -17,10 +17,12 @@ import Gamification from './pages/features/Gamification';
 import AutomatedCampaigns from './pages/features/AutomatedCampaigns';
 import Analytics from './pages/features/Analytics';
 import CustomerJourney from './pages/features/CustomerJourney';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

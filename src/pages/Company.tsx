@@ -1,21 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Company: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="max-w-3xl"
+                className="text-center mb-16"
             >
-                <span className="text-slate-600 font-medium tracking-wide uppercase text-sm">About us</span>
-                <h1 className="mt-4 text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
-                    We are rebuilding <br /> customer loyalty.
+                <span className="text-slate-600 font-medium tracking-wide uppercase text-sm">{t('company.badge')}</span>
+                <h1 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+                    {t('company.title')}
                 </h1>
-                <p className="mt-8 text-xl text-slate-600 leading-relaxed">
-                    Omniwallet was founded on the belief that digital wallets are the future of customer engagement.
-                    We provide the infrastructure for brands to connect with their customers where they are: on their phones.
+                <p className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto">
+                    {t('company.description')}
                 </p>
             </motion.div>
 

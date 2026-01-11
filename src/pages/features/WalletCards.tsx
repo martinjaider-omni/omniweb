@@ -1,22 +1,22 @@
-
 import React from 'react';
 import { ArrowRight, Smartphone, Zap, Wallet, QrCode } from 'lucide-react';
 import Button from '../../components/ui/Button';
+import { useTranslation } from 'react-i18next';
 
 const WalletCards = () => {
+    const { t } = useTranslation();
     return (
         <div className="pt-24 pb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-6">Wallet Loyalty Cards</h1>
+                    <h1 className="text-4xl font-bold text-slate-900 mb-6">{t('featureDetail.walletCards.title')}</h1>
                     <p className="text-xl text-slate-600">
-                        The heart of a modern loyalty program. No apps to download, no plastic cards to carry. Just a frictionless experience in Apple & Google Wallet.
+                        {t('featureDetail.walletCards.description')}
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 flex justify-center items-center">
-                        {/* Conceptual visual of wallet cards */}
                         <div className="relative w-64 h-[400px]">
                             <div className="absolute top-0 left-4 w-full h-full bg-slate-200 rounded-3xl transform -rotate-6"></div>
                             <div className="absolute top-0 right-4 w-full h-full bg-slate-300 rounded-3xl transform rotate-3"></div>
@@ -45,9 +45,9 @@ const WalletCards = () => {
                                     <Wallet className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Native Mobile Wallets</h3>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{t('featureDetail.walletCards.nativeTitle')}</h3>
                                     <p className="text-slate-600">
-                                        Leverage the native wallets already installed on 99% of smartphones. Apple Wallet and Google Wallet are trusted, secure, and always accessible.
+                                        {t('featureDetail.walletCards.nativeDesc')}
                                     </p>
                                 </div>
                             </div>
@@ -57,9 +57,9 @@ const WalletCards = () => {
                                     <Zap className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Real-Time Updates</h3>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{t('featureDetail.walletCards.updatesTitle')}</h3>
                                     <p className="text-slate-600">
-                                        Points balance, tier status, and coupons update instantly on the card face. Keep customers informed without them having to check an app.
+                                        {t('featureDetail.walletCards.updatesDesc')}
                                     </p>
                                 </div>
                             </div>
@@ -69,9 +69,9 @@ const WalletCards = () => {
                                     <Smartphone className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Zero-Friction Installation</h3>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">{t('featureDetail.walletCards.frictionlessTitle')}</h3>
                                     <p className="text-slate-600">
-                                        Customers can add their card via QR code, SMS link, email, or a tap in your existing app. 2-click installation boosts adoption rates by up to 5x.
+                                        {t('featureDetail.walletCards.frictionlessDesc')}
                                     </p>
                                 </div>
                             </div>
@@ -80,12 +80,12 @@ const WalletCards = () => {
                 </div>
 
                 <div className="bg-[#232323] text-white rounded-3xl p-8 md:p-16 text-center">
-                    <h2 className="text-3xl font-bold mb-6">Stop building apps nobody downloads.</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('featureDetail.walletCards.ctaTitle')}</h2>
                     <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                        Switch to Wallet Loyalty Cards and engage your customers where they actually pay attention.
+                        {t('featureDetail.walletCards.ctaDesc')}
                     </p>
                     <Button variant="primary" className="bg-white text-slate-900 hover:bg-slate-100">
-                        Create Your First Pass <ArrowRight className="w-4 h-4 ml-2" />
+                        {t('featureDetail.walletCards.ctaButton')} <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                 </div>
             </div>

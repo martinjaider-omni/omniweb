@@ -1,12 +1,14 @@
 import React from 'react';
 import { ShoppingCart, Store, Workflow, Database, ArrowRight, MessageSquare, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logoUrl from '../assets/logo.png';
 
 const IntegrationsSection: React.FC = () => {
+    const { t } = useTranslation();
     const categories = [
         {
-            title: "E-Commerce",
+            title: t('integrations.categories.ecommerce'),
             icon: <ShoppingCart className="w-5 h-5" />,
             platforms: [
                 { name: "Shopify" },
@@ -17,7 +19,7 @@ const IntegrationsSection: React.FC = () => {
             ]
         },
         {
-            title: "POS & ERP",
+            title: t('integrations.categories.pos'),
             icon: <Database className="w-5 h-5" />,
             platforms: [
                 { name: "Stockagile" },
@@ -28,7 +30,7 @@ const IntegrationsSection: React.FC = () => {
             ]
         },
         {
-            title: "CRM & Marketing",
+            title: t('integrations.categories.crm'),
             icon: <MessageSquare className="w-5 h-5" />,
             platforms: [
                 { name: "Klaviyo" },
@@ -38,7 +40,7 @@ const IntegrationsSection: React.FC = () => {
             ]
         },
         {
-            title: "Chatbots & Automation",
+            title: t('integrations.categories.automation'),
             icon: <Zap className="w-5 h-5" />,
             platforms: [
                 { name: "Oct8ne" },
@@ -54,11 +56,11 @@ const IntegrationsSection: React.FC = () => {
                     {/* Text Content & Categories */}
                     <div className="flex-1 max-w-2xl lg:max-w-none">
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6">
-                            Connects with your <br />
-                            <span className="text-[#255664]">entire tech stack.</span>
+                            {t('integrations.title')} <br />
+                            <span className="text-[#255664]">{t('integrations.subtitle')}</span>
                         </h2>
                         <p className="text-xl text-slate-500 mb-12 leading-relaxed">
-                            Omniwallet integrates seamlessly with the tools you already use. Sync customer data, trigger automations, and manage rewards across your physical and digital stores.
+                            {t('integrations.description')}
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
@@ -85,7 +87,7 @@ const IntegrationsSection: React.FC = () => {
                         <div className="mt-12">
                             <Link to="/integrations">
                                 <button className="inline-flex items-center gap-2 px-8 py-3 bg-white border border-[#232323] text-[#232323] rounded-xl font-medium hover:bg-slate-50 transition-all group">
-                                    See all integrations
+                                    {t('integrations.seeAll')}
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </button>
                             </Link>

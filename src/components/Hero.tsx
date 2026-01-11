@@ -2,49 +2,52 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight, Apple, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from './ui/Button';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="pt-24 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <section className="pt-12 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 animate-fade-in-up">
 
         {/* Pill Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-200 bg-slate-50 text-xs font-medium text-slate-600 mb-8 hover:border-slate-300 transition-colors cursor-pointer">
           <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-          New: Omniwallet 3.0 is live
+          {t('hero.badge')}
           <ArrowRight className="w-3 h-3 text-slate-400" />
         </div>
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1] mb-6">
-          Customer loyalty. <br />
-          <span className="text-slate-400">Straight to the wallet.</span>
+          {t('hero.title')} <br />
+          <span className="text-slate-400">{t('hero.subtitle')}</span>
         </h1>
 
         {/* Subhead */}
         <p className="text-lg md:text-xl text-slate-500 max-w-2xl mb-10 leading-relaxed">
-          The all-in-one platform to create, manage, and distribute digital loyalty cards for Apple Wallet and Google Wallet. No apps to download.
+          {t('hero.description')}
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <Link to="/signup">
             <Button variant="primary" size="lg" className="rounded-xl px-8">
-              Start for free
+              {t('hero.ctaPrimary')}
             </Button>
           </Link>
           <Button variant="secondary" size="lg" className="rounded-xl px-8">
-            Talk to sales
+            {t('hero.ctaSecondary')}
           </Button>
         </div>
 
         <div className="mt-6 flex items-center gap-6 text-sm text-slate-500">
           <span className="flex items-center gap-1.5">
-            <Check className="w-4 h-4 text-emerald-500" /> No credit card required
+            <Check className="w-4 h-4 text-emerald-500" /> {t('hero.noCreditCard')}
           </span>
           <span className="flex items-center gap-1.5">
-            <Check className="w-4 h-4 text-emerald-500" /> 100 activities free trial
+            <Check className="w-4 h-4 text-emerald-500" /> {t('hero.freeTrial')}
           </span>
         </div>
       </div>
