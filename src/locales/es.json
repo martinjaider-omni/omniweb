@@ -10,8 +10,18 @@
     },
     "hero": {
         "badge": "Nuevo: Omniwallet 3.0 ya está disponible",
-        "title": "Fidelización de clientes.",
-        "subtitle": "Directo a la billetera.",
+        "title": "Fidelización de clientes",
+        "subtitleItems": [
+            "Programa de puntos",
+            "Tarjetas Wallet",
+            "Niveles de cliente",
+            "Referidos",
+            "Recompensas",
+            "Notificaciones push",
+            "Campañas avanzadas",
+            "Customer journeys",
+            "Analítica"
+        ],
         "description": "La plataforma todo en uno para crear, gestionar y escalar programas de fidelización de clientes online, offline y omnicanal con pases digitales para Apple Wallet y Google Wallet.",
         "ctaPrimary": "Empezar gratis",
         "ctaSecondary": "Hablar con ventas",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ArrowRight, Apple, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +7,15 @@ import Button from './ui/Button';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
+  const subtitleItems = t('hero.subtitleItems', { returnObjects: true }) as string[];
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % subtitleItems.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [subtitleItems.length]);
 
   return (
     <section className="pt-12 pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
@@ -20,9 +29,22 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1] mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight leading-[1.1] mb-6 min-h-[1.1em] md:min-h-[2.2em]">
           {t('hero.title')} <br />
-          <span className="text-slate-400">{t('hero.subtitle')}</span>
+          <div className="h-[1.1em] relative overflow-hidden flex justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -40, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="text-slate-400 absolute"
+              >
+                {subtitleItems[currentIndex]}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </h1>
 
         {/* Subhead */}

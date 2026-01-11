@@ -10,8 +10,18 @@
     },
     "hero": {
         "badge": "New: Omniwallet 3.0 is live",
-        "title": "Customer loyalty.",
-        "subtitle": "Straight to the wallet.",
+        "title": "Customer loyalty",
+        "subtitleItems": [
+            "Points Program",
+            "Wallet Cards",
+            "Customer Tiers",
+            "Referrals",
+            "Rewards",
+            "Push Notifications",
+            "Advanced Campaigns",
+            "Customer Journeys",
+            "Analytics"
+        ],
         "description": "The all-in-one platform to create, manage, and scale online, offline, and omnichannel customer loyalty programs with digital passes for Apple Wallet and Google Wallet.",
         "ctaPrimary": "Start for free",
         "ctaSecondary": "Talk to sales",
