@@ -9,7 +9,11 @@ import {
     Dices,
     Zap,
     TrendingUp,
-    ArrowRight
+    ArrowRight,
+    Star,
+    Cake,
+    Instagram,
+    UserPlus
 } from 'lucide-react';
 
 interface FeatureVisualsProps {
@@ -17,8 +21,8 @@ interface FeatureVisualsProps {
 }
 
 const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
-    const Container: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-        <div className="relative w-full max-w-sm aspect-square bg-white rounded-2xl shadow-xl border border-slate-100 p-8 flex flex-col items-center justify-center overflow-hidden select-none">
+    const Container: React.FC<{ children: React.ReactNode; noPadding?: boolean }> = ({ children, noPadding }) => (
+        <div className={`relative w-full max-w-sm aspect-square bg-white rounded-2xl shadow-xl border border-slate-100 ${noPadding ? '' : 'p-8'} flex flex-col items-center justify-center overflow-hidden select-none`}>
             <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 to-transparent rounded-2xl -z-10"></div>
             {children}
         </div>
@@ -27,42 +31,71 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
     switch (featureKey) {
         case 'points':
             return (
-                <Container>
-                    <div className="w-full space-y-3">
-                        {/* Total Balance Card */}
-                        <div className="bg-slate-900 rounded-xl p-4 text-white shadow-lg mb-6 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-full -mr-4 -mt-4"></div>
-                            <div className="text-xs text-slate-400 mb-1">Total Balance</div>
-                            <div className="text-2xl font-bold flex items-center gap-2">
-                                2,450 <span className="text-xs font-normal bg-white/20 px-2 py-0.5 rounded">PTS</span>
+                <Container noPadding>
+                    <div className="w-full h-full flex flex-col">
+                        {/* Top Banner with Background Mock */}
+                        <div className="h-24 bg-gradient-to-br from-slate-800 to-slate-900 p-4 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl -ml-6 -mb-6"></div>
+
+                            <div className="relative z-10">
+                                <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest mb-0.5">How to earn</div>
+                                <div className="text-xl font-bold text-white">Points</div>
                             </div>
                         </div>
 
-                        {/* Transaction List */}
-                        <div className="space-y-2">
-                            <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-100">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                                        <TrendingUp size={14} />
+                        <div className="flex-1 p-5 flex flex-col">
+                            {/* Points Cards Grid */}
+                            <div className="grid grid-cols-2 gap-3 mb-4">
+                                <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
+                                    <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <UserPlus size={14} />
                                     </div>
-                                    <div className="text-xs">
-                                        <div className="font-medium text-slate-900">Purchase Reward</div>
-                                        <div className="text-slate-500">Just now</div>
-                                    </div>
+                                    <div className="text-[11px] font-bold text-slate-900">100 Points</div>
+                                    <div className="w-8 h-1 bg-slate-100 rounded-full"></div>
                                 </div>
-                                <div className="text-sm font-bold text-emerald-600">+150</div>
+                                <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
+                                    <div className="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-500">
+                                        <Star size={14} />
+                                    </div>
+                                    <div className="text-[11px] font-bold text-slate-900">40 Points</div>
+                                    <div className="w-10 h-1 bg-slate-100 rounded-full"></div>
+                                </div>
+                                <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
+                                    <div className="w-7 h-7 rounded-full bg-pink-50 flex items-center justify-center text-pink-500">
+                                        <Cake size={14} />
+                                    </div>
+                                    <div className="text-[11px] font-bold text-slate-900">30 Points</div>
+                                    <div className="w-6 h-1 bg-slate-100 rounded-full"></div>
+                                </div>
+                                <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
+                                    <div className="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center text-slate-900">
+                                        <Instagram size={14} />
+                                    </div>
+                                    <div className="text-[11px] font-bold text-slate-900">50 Points</div>
+                                    <div className="w-8 h-1 bg-slate-100 rounded-full"></div>
+                                </div>
                             </div>
-                            <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-slate-100 opacity-60">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                                        <ShoppingBag size={14} />
+
+                            {/* Product Earning Banner */}
+                            <div className="mt-auto bg-slate-50 rounded-xl overflow-hidden flex border border-slate-100">
+                                <div className="w-16 bg-gradient-to-tr from-cyan-400/20 to-blue-500/20 flex items-center justify-center relative">
+                                    <div className="w-8 h-8 rounded-full bg-white/40 blur-md"></div>
+                                    <ShoppingBag size={16} className="text-cyan-600 absolute" />
+                                </div>
+                                <div className="flex-1 p-2.5 flex flex-col justify-center gap-1.5">
+                                    <div className="space-y-1">
+                                        <div className="w-12 h-1 bg-slate-200 rounded-full"></div>
+                                        <div className="w-20 h-1 bg-slate-200 rounded-full"></div>
                                     </div>
-                                    <div className="text-xs">
-                                        <div className="font-medium text-slate-900">Store Visit</div>
-                                        <div className="text-slate-500">2h ago</div>
+                                    <div className="flex justify-between items-end">
+                                        <div className="flex items-center gap-1.5 text-slate-900 font-bold text-[10px] uppercase">
+                                            <Gift size={10} className="text-pink-500" />
+                                            Earn 210 pts
+                                        </div>
+                                        <div className="text-[9px] font-bold text-slate-400">60 EUR</div>
                                     </div>
                                 </div>
-                                <div className="text-sm font-bold text-slate-900">+50</div>
                             </div>
                         </div>
                     </div>

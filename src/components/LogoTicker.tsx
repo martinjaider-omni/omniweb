@@ -15,6 +15,10 @@ import logo12 from '../assets/clients/logo12.png';
 import logo13 from '../assets/clients/logo13.png';
 import logo14 from '../assets/clients/logo14.png';
 import logo15 from '../assets/clients/logo15.png';
+import logo16 from '../assets/clients/logo16.png';
+import logo17 from '../assets/clients/logo17.png';
+import logo18 from '../assets/clients/logo18.png';
+import logo19 from '../assets/clients/logo19.png';
 
 const LogoTicker: React.FC = () => {
   // Import logos dynamically with sizing adjustments for visual balance
@@ -24,16 +28,20 @@ const LogoTicker: React.FC = () => {
     { src: logo3, className: "h-7 md:h-9" },   // Galp
     { src: logo4, className: "h-6 md:h-8" },   // Bazar
     { src: logo5, className: "h-5 md:h-7" },   // Farma2Go
-    { src: logo6, className: "h-6 md:h-8" },   // Mus & Bombon
+    { src: logo6, className: "h-5 md:h-7" },   // Mus & Bombon (Reduced)
     { src: logo7, className: "h-5 md:h-7" },   // Alqvimia
-    { src: logo8, className: "h-12 md:h-16" }, // Mundisa (Tall)
+    { src: logo8, className: "h-10 md:h-13" }, // Mundisa (Taller than average, but reduced slightly)
     { src: logo9, className: "h-8 md:h-10" },  // Maese Lab
-    { src: logo10, className: "h-8 md:h-11" }, // Cuple
+    { src: logo10, className: "h-7 md:h-9" },  // Cuple (Reduced)
     { src: logo11, className: "h-5 md:h-7" },  // Clinica Londres (Wide)
-    { src: logo12, className: "h-4 md:h-6" },  // Fulham (Very wide/thin)
+    { src: logo12, className: "h-9 md:h-13" }, // Fulham (Enlarged further)
     { src: logo13, className: "h-6 md:h-8" },  // Veganashi
     { src: logo14, className: "h-10 md:h-14" }, // Amona (Circle/tall)
     { src: logo15, className: "h-10 md:h-14" }, // Cooperativa Falset (Circle/tall)
+    { src: logo16, className: "h-8 md:h-11" }, // Ideo
+    { src: logo17, className: "h-9 md:h-12" }, // Guam
+    { src: logo18, className: "h-6 md:h-8" },  // Stampa e Stampe (Reduced)
+    { src: logo19, className: "h-11 md:h-15" }, // Kultur
   ];
 
   return (
