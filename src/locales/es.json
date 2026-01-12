@@ -20,7 +20,8 @@
             "Notificaciones push",
             "Campañas avanzadas",
             "Customer journeys",
-            "Analítica"
+            "Analítica",
+            "ROPO"
         ],
         "description": "La plataforma todo en uno para crear, gestionar y escalar programas de fidelización de clientes online, offline y omnicanal con pases digitales para Apple Wallet y Google Wallet.",
         "ctaPrimary": "Empezar gratis",
@@ -165,6 +166,10 @@
             "analytics": {
                 "title": "Analítica Avanzada",
                 "desc": "Información profunda sobre el comportamiento del cliente, ROI y rendimiento del programa."
+            },
+            "ropo": {
+                "title": "ROPO",
+                "desc": "Conecta la investigación online con compras físicas."
             }
         },
         "learnMore": "Saber más",
@@ -275,6 +280,37 @@
         "description": "Estamos democratizando la tecnología de fidelización para que cualquier empresa pueda construir relaciones duraderas con sus clientes."
     },
     "featureDetail": {
+        "ropo": {
+            "title": "ROPO (Research Online, Purchase Offline)",
+            "description": "Conecte sus esfuerzos de marketing digital con las ventas en el mundo real. Entienda cómo sus clientes investigan en línea y terminan comprando en sus tiendas físicas.",
+            "mainFeature": {
+                "title": "Estrategia Omnicanal Real",
+                "description": "Omniwallet permite una integración perfecta entre la navegación web y la experiencia en tienda física a través de pases digitales dinámicos."
+            },
+            "capabilities": [
+                {
+                    "title": "Atribución Directa",
+                    "description": "Sepa exactamente qué campaña digital llevó al cliente a su punto de venta físico."
+                },
+                {
+                    "title": "Cupones de Proximidad",
+                    "description": "Envíe notificaciones automáticas cuando un cliente que ha investigado un producto esté cerca de su tienda."
+                },
+                {
+                    "title": "Medición de Conversión Offline",
+                    "description": "Mida el tráfico a tienda impulsado por sus canales digitales con precisión quirúrgica."
+                },
+                {
+                    "title": "Experiencia unificada",
+                    "description": "Mantenga la coherencia de marca y beneficios sin importar dónde elija comprar el cliente."
+                }
+            ],
+            "cta": {
+                "title": "¿Listo para dominar el modelo ROPO?",
+                "subtitle": "Únete a las marcas líderes que ya están conectando sus mundos online y offline con Omniwallet.",
+                "button": "Empezar ahora"
+            }
+        },
         "walletCards": {
             "title": "Tarjetas de Fidelización en Wallet",
             "description": "El corazón de un programa de fidelización moderno. Sin aplicaciones que descargar, sin tarjetas de plástico que llevar. Una experiencia sin fricciones en Apple y Google Wallet.",

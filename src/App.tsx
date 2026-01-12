@@ -17,6 +17,7 @@ import Gamification from './pages/features/Gamification';
 import AutomatedCampaigns from './pages/features/AutomatedCampaigns';
 import Analytics from './pages/features/Analytics';
 import CustomerJourney from './pages/features/CustomerJourney';
+import ROPO from './pages/features/ROPO';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -43,6 +44,7 @@ const App: React.FC = () => {
           <Route path="features/automated-campaigns" element={<AutomatedCampaigns />} />
           <Route path="features/analytics" element={<Analytics />} />
           <Route path="features/customer-journey" element={<CustomerJourney />} />
+          <Route path="features/ropo" element={<ROPO />} />
         </Route>
       </Routes>
     </Router>

@@ -13,7 +13,9 @@ import {
     Star,
     Cake,
     Instagram,
-    UserPlus
+    UserPlus,
+    MapPin,
+    Search
 } from 'lucide-react';
 
 interface FeatureVisualsProps {
@@ -288,6 +290,52 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                             </div>
                             <div className="flex-1 bg-slate-50 border border-slate-100 text-slate-400 text-[10px] p-2 rounded-lg text-center">
                                 End
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            );
+
+        case 'ropo':
+            return (
+                <Container>
+                    <div className="w-full flex flex-col items-center justify-center gap-6">
+                        <div className="flex items-center justify-center gap-4 w-full">
+                            {/* Online Research */}
+                            <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-lg flex flex-col items-center gap-1.5 transform -rotate-6">
+                                <Search size={20} className="text-blue-500" />
+                                <div className="w-8 h-1 bg-slate-100 rounded-full"></div>
+                                <div className="text-[8px] font-bold text-slate-400 font-mono">ONLINE</div>
+                            </div>
+
+                            {/* Connection Arrow */}
+                            <div className="flex flex-col items-center gap-1">
+                                <ArrowRight className="text-slate-300" size={16} />
+                                <div className="text-[10px] font-bold text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">MATCH</div>
+                            </div>
+
+                            {/* Offline Purchase */}
+                            <div className="bg-slate-900 rounded-xl p-3 shadow-xl flex flex-col items-center gap-1.5 transform rotate-6 text-white">
+                                <ShoppingBag size={20} className="text-emerald-400" />
+                                <div className="w-8 h-1 bg-white/10 rounded-full"></div>
+                                <div className="text-[8px] font-bold text-white/30 font-mono">OFFLINE</div>
+                            </div>
+                        </div>
+
+                        {/* Store Map Visual */}
+                        <div className="w-full bg-slate-50 rounded-xl p-4 border border-slate-100 relative overflow-hidden">
+                            <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-900 border border-slate-100">
+                                    <MapPin size={16} />
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-bold text-slate-900">Store Visit Detected</div>
+                                    <div className="text-[9px] text-slate-500 italic">500m from Main St. Store</div>
+                                </div>
+                            </div>
+                            <div className="mt-3 flex gap-1.5">
+                                <div className="h-1 flex-1 bg-emerald-500 rounded-full"></div>
+                                <div className="h-1 w-8 bg-slate-200 rounded-full"></div>
                             </div>
                         </div>
                     </div>

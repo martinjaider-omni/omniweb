@@ -12,14 +12,15 @@ import {
   ArrowRight,
   ShieldCheck,
   Check,
-  Wallet
+  Wallet,
+  Globe
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from './ui/Button';
 import FeatureVisuals from './FeatureVisuals';
 
 // Define the feature types
-type FeatureKey = 'wallet' | 'points' | 'tiers' | 'market' | 'push' | 'giftcards' | 'gamification' | 'automation' | 'analytics' | 'journey';
+type FeatureKey = 'wallet' | 'points' | 'tiers' | 'market' | 'push' | 'gamification' | 'automation' | 'analytics' | 'journey' | 'ropo';
 
 const FeatureTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<FeatureKey>('points');
@@ -66,14 +67,6 @@ const FeatureTabs: React.FC = () => {
       link: "/features/push-notifications",
       items: ["Geolocation triggers", "Wallet pass integration", "Segmented messaging"]
     },
-    giftcards: {
-      label: "Gift Cards",
-      icon: <Gift />,
-      title: "Digital Gift Cards",
-      description: "Issue branded gift cards instantly. Use them for returns, rewards, or B2B incentives. 100% digital, secure, and integrated with your POS.",
-      link: "/features/gift-cards",
-      items: ["Instant digital delivery", "Prepaid corporate wallets", "Online & in-store use"]
-    },
     gamification: {
       label: "Gamification",
       icon: <Dices />,
@@ -100,11 +93,19 @@ const FeatureTabs: React.FC = () => {
     },
     journey: {
       label: "Journey Builder",
-      icon: <Users />, /* Using Users as placeholder or maybe a different one like Map? Let's check imports. */
+      icon: <Users />,
       title: "Customer Journey Builder",
       description: "Map out multi-step customer experiences. Trigger actions based on location, spending behavior, or time elapsed since last visit.",
       link: "/features/customer-journey",
       items: ["Visual flow builder", "Location-based triggers", "AB testing"]
+    },
+    ropo: {
+      label: "ROPO",
+      icon: <Globe />,
+      title: "ROPO: Research Online, Purchase Offline",
+      description: "Close the loop between the online and offline worlds. Attribute physical sales to your digital campaigns and offer incentives for users to visit your stores.",
+      link: "/features/ropo",
+      items: ["Offline sales attribution", "Geo-fenced coupons", "Store traffic measurement"]
     }
   };
 

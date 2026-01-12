@@ -20,7 +20,8 @@
             "Push Notifications",
             "Advanced Campaigns",
             "Customer Journeys",
-            "Analytics"
+            "Analytics",
+            "ROPO"
         ],
         "description": "The all-in-one platform to create, manage, and scale online, offline, and omnichannel customer loyalty programs with digital passes for Apple Wallet and Google Wallet.",
         "ctaPrimary": "Start for free",
@@ -165,6 +166,10 @@
             "analytics": {
                 "title": "Advanced Analytics",
                 "desc": "Deep insights into customer behavior, ROI, and program performance."
+            },
+            "ropo": {
+                "title": "ROPO",
+                "desc": "Connect online research with physical purchases."
             }
         },
         "learnMore": "Learn more",
@@ -275,6 +280,37 @@
         "description": "We are democratizing loyalty technology so any business can build lasting relationships with their customers."
     },
     "featureDetail": {
+        "ropo": {
+            "title": "ROPO (Research Online, Purchase Offline)",
+            "description": "Connect your digital marketing efforts with real-world sales. Understand how your customers research online and end up buying in your physical stores.",
+            "mainFeature": {
+                "title": "True Omnichannel Strategy",
+                "description": "Omniwallet allows a seamless integration between web browsing and the in-store experience through dynamic digital passes."
+            },
+            "capabilities": [
+                {
+                    "title": "Direct Attribution",
+                    "description": "Know exactly which digital campaign led the customer to your physical point of sale."
+                },
+                {
+                    "title": "Proximity Coupons",
+                    "description": "Send push notifications when a customer who has researched a product is near your store."
+                },
+                {
+                    "title": "Offline Conversion Tracking",
+                    "description": "Measure store traffic driven by your digital channels with surgical precision."
+                },
+                {
+                    "title": "Unified Experience",
+                    "description": "Maintain brand consistency and benefits regardless of where the customer chooses to shop."
+                }
+            ],
+            "cta": {
+                "title": "Ready to master the ROPO model?",
+                "subtitle": "Join leading brands that are already connecting their online and offline worlds with Omniwallet.",
+                "button": "Get started now"
+            }
+        },
         "walletCards": {
             "title": "Wallet Loyalty Cards",
             "description": "The heart of a modern loyalty program. No apps to download, no plastic cards to carry. Just a frictionless experience in Apple & Google Wallet.",

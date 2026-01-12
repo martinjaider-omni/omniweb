@@ -19,6 +19,7 @@ import logo16 from '../assets/clients/logo16.png';
 import logo17 from '../assets/clients/logo17.png';
 import logo18 from '../assets/clients/logo18.png';
 import logo19 from '../assets/clients/logo19.png';
+import logo20 from '../assets/clients/logo20.png';
 
 const LogoTicker: React.FC = () => {
   // Import logos dynamically with sizing adjustments for visual balance
@@ -42,6 +43,7 @@ const LogoTicker: React.FC = () => {
     { src: logo17, className: "h-9 md:h-12" }, // Guam
     { src: logo18, className: "h-6 md:h-8" },  // Stampa e Stampe (Reduced)
     { src: logo19, className: "h-11 md:h-15" }, // Kultur
+    { src: logo20, className: "h-11 md:h-15" }, // Llar Homestyle
   ];
 
   return (

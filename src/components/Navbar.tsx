@@ -174,6 +174,12 @@ const Navbar: React.FC = () => {
                         title="Automated Campaigns"
                         desc="Trigger-based marketing"
                       />
+                      <MenuLink
+                        to="/features/ropo"
+                        icon={<Globe size={18} />}
+                        title="ROPO"
+                        desc="Research Online, Purchase Offline"
+                      />
                     </div>
                   </div>
 
