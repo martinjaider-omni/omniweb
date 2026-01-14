@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Info, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Pricing: React.FC = () => {
@@ -142,11 +143,11 @@ const Pricing: React.FC = () => {
                             t('features.items.points.title'),
                             t('features.items.wallet.title'),
                             t('features.items.referral.title'),
-                            "Unlimited Push Notif.",
-                            "Customizable Emails",
-                            "Unlimited Integrations",
-                            "API Access",
-                            "Loyalty Master"
+                            t('pricing.labels.unlimitedPush'),
+                            t('pricing.labels.customEmails'),
+                            t('pricing.labels.unlimitedIntegrations'),
+                            t('pricing.labels.apiAccess'),
+                            t('pricing.labels.loyaltyMaster')
                         ].map((feature, i) => (
                             <li key={i} className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
@@ -176,9 +177,9 @@ const Pricing: React.FC = () => {
                         {[
                             t('pricing.labels.everythingIn', { plan: 'Starter' }),
                             t('features.items.tiers.title'),
-                            "Points Expiration",
-                            "Points Blocking",
-                            "Analytics Plus"
+                            t('pricing.labels.pointsExpiration'),
+                            t('pricing.labels.pointsBlocking'),
+                            t('pricing.labels.analyticsPlus')
                         ].map((feature, i) => (
                             <li key={i} className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
@@ -210,7 +211,7 @@ const Pricing: React.FC = () => {
                             t('features.items.gamification.title'),
                             t('features.items.marketplace.title'),
                             t('features.items.giftcards.title'),
-                            "Analytics Advanced"
+                            t('pricing.labels.analyticsAdvanced')
                         ].map((feature, i) => (
                             <li key={i} className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
@@ -228,17 +229,17 @@ const Pricing: React.FC = () => {
                     </div>
                     <p className="text-sm text-slate-500 mb-6 h-10">{t('pricing.plans.enterprise.desc')}</p>
 
-                    <a href="https://www.omniwallet.net/contacto?plan=enterprise" target="_blank" rel="noopener noreferrer" className="block w-full py-2.5 px-4 bg-slate-200 border border-transparent rounded-xl text-center font-medium text-slate-900 hover:bg-slate-300 transition-colors mb-8">
-                        {t('cta.talkSales')}
-                    </a>
+                    <Link to="/book-demo" className="block w-full py-2.5 px-4 bg-slate-200 border border-transparent rounded-xl text-center font-medium text-slate-900 hover:bg-slate-300 transition-colors mb-8">
+                        {t('pricing.labels.talkSales')}
+                    </Link>
 
                     <ul className="space-y-3 flex-grow">
                         {[
-                            "Custom Integrations",
-                            "Strategic Consulting",
-                            "Dedicated Success Manager",
-                            "Priority Support",
-                            "Assisted Migration"
+                            t('pricing.labels.customIntegrations'),
+                            t('pricing.labels.strategicConsulting'),
+                            t('pricing.labels.successManager'),
+                            t('pricing.labels.prioritySupport'),
+                            t('pricing.labels.migration')
                         ].map((feature, i) => (
                             <li key={i} className="flex items-start gap-3">
                                 <Check className="w-5 h-5 text-slate-400 flex-shrink-0" />
@@ -262,12 +263,12 @@ const Pricing: React.FC = () => {
 
                         <div className="space-y-4">
                             {[
-                                { label: "Up to 100", max: 100, price: "0,00€", gradient: "from-emerald-500 to-emerald-400" },
-                                { label: "101 to 250", max: 250, price: "0,00€", gradient: "from-emerald-500 to-emerald-400" },
-                                { label: "251 to 1,000", max: 1000, price: "0,10€", gradient: "from-[#255664] to-emerald-500" },
-                                { label: "1,001 to 5,000", max: 5000, price: "0,08€", gradient: "from-[#255664] to-emerald-500" },
-                                { label: "5,001 to 10,000", max: 10000, price: "0,06€", gradient: "from-[#255664] to-emerald-500" },
-                                { label: "10,001 to 50,000", max: 50000, price: "0,04€", gradient: "from-[#255664] to-emerald-500" },
+                                { label: t('pricing.calculator.ranges.upTo', { count: 100 }), max: 100, price: "0,00€", gradient: "from-emerald-500 to-emerald-400" },
+                                { label: t('pricing.calculator.ranges.upTo', { count: 250 }), max: 250, price: "0,00€", gradient: "from-emerald-500 to-emerald-400" },
+                                { label: t('pricing.calculator.ranges.between', { start: '251', end: '1,000' }), max: 1000, price: "0,10€", gradient: "from-[#255664] to-emerald-500" },
+                                { label: t('pricing.calculator.ranges.between', { start: '1,001', end: '5,000' }), max: 5000, price: "0,08€", gradient: "from-[#255664] to-emerald-500" },
+                                { label: t('pricing.calculator.ranges.between', { start: '5,001', end: '10,000' }), max: 10000, price: "0,06€", gradient: "from-[#255664] to-emerald-500" },
+                                { label: t('pricing.calculator.ranges.between', { start: '10,001', end: '50,000' }), max: 50000, price: "0,04€", gradient: "from-[#255664] to-emerald-500" },
                             ].map((tier, index) => {
                                 const isActive = activities > (index === 0 ? 0 : [0, 100, 250, 1000, 5000, 10000][index]) &&
                                     activities <= tier.max;
@@ -367,28 +368,28 @@ const Pricing: React.FC = () => {
 
                                     <div className="space-y-3">
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-slate-600">Selected Plan</span>
+                                            <span className="text-slate-600">{t('pricing.calculator.breakdown.planSelected')}</span>
                                             <span className="font-semibold text-slate-900">€{getBasePrice(selectedPlan)},00</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-slate-600">Estimated Activities</span>
+                                            <span className="text-slate-600">{t('pricing.calculator.breakdown.estimatedActivities')}</span>
                                             <span className="font-semibold text-slate-900">{activities.toLocaleString()}</span>
                                         </div>
 
                                         {/* Activity Cost Breakdown */}
                                         {getActivityBreakdown(activities).length > 0 && (
                                             <div className="pt-2 border-t border-slate-200">
-                                                <div className="text-xs font-semibold text-slate-700 mb-2">Activity Cost Breakdown:</div>
+                                                <div className="text-xs font-semibold text-slate-700 mb-2">{t('pricing.calculator.breakdown.activityCostBreakdown')}</div>
                                                 {getActivityBreakdown(activities).map((item, index) => (
                                                     <div key={index} className="flex justify-between text-xs mb-1.5">
                                                         <span className="text-slate-500">
-                                                            {item.activities.toLocaleString()} × €{item.rate.toFixed(2)} <span className="text-slate-400">({item.tier})</span>
+                                                            {item.activities.toLocaleString()} × €{item.rate.toFixed(2)} <span className="text-slate-400">({t('pricing.calculator.ranges.between', { start: item.tier.split('-')[0], end: item.tier.split('-')[1] })})</span>
                                                         </span>
                                                         <span className="font-medium text-slate-700">€{item.cost.toFixed(2)}</span>
                                                     </div>
                                                 ))}
                                                 <div className="flex justify-between text-sm font-semibold mt-2 pt-2 border-t border-slate-200">
-                                                    <span className="text-slate-700">Total Activity Cost</span>
+                                                    <span className="text-slate-700">{t('pricing.calculator.breakdown.totalActivityCost')}</span>
                                                     <span className="text-slate-900">€{variableCost.toFixed(2)}</span>
                                                 </div>
                                             </div>
@@ -396,7 +397,7 @@ const Pricing: React.FC = () => {
 
                                         {getActivityBreakdown(activities).length === 0 && (
                                             <div className="flex justify-between text-sm">
-                                                <span className="text-slate-600">Activity Cost</span>
+                                                <span className="text-slate-600">{t('pricing.calculator.breakdown.activityCost')}</span>
                                                 <span className="font-semibold text-emerald-600">€0.00</span>
                                             </div>
                                         )}
@@ -404,7 +405,7 @@ const Pricing: React.FC = () => {
 
                                     <div className="pt-4 border-t-2 border-slate-200 mt-4">
                                         <div className="flex justify-between items-center">
-                                            <span className="font-bold text-slate-900">Total Monthly</span>
+                                            <span className="font-bold text-slate-900">{t('pricing.calculator.breakdown.totalMonthly')}</span>
                                             <span className="font-bold text-4xl text-[#255664]">
                                                 €{(getBasePrice(selectedPlan) + variableCost).toFixed(2)}
                                             </span>
@@ -415,7 +416,7 @@ const Pricing: React.FC = () => {
 
                             {activities < 50000 && (
                                 <a href="/signup" className="block w-full py-4 bg-[#255664] text-white rounded-xl font-bold text-base hover:bg-[#1e4652] transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-center">
-                                    Start for free
+                                    {t('pricing.labels.startFree')}
                                 </a>
                             )}
 
@@ -428,8 +429,8 @@ const Pricing: React.FC = () => {
             {/* Feature Comparison Table */}
             <div className="max-w-7xl mx-auto mt-24">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Compare all features</h2>
-                    <p className="text-lg text-slate-600">Choose the plan that's right for your business</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t('pricing.table.title')}</h2>
+                    <p className="text-lg text-slate-600">{t('pricing.table.subtitle')}</p>
                 </div>
 
                 <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
@@ -437,11 +438,11 @@ const Pricing: React.FC = () => {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-slate-200 bg-slate-50">
-                                    <th className="text-left py-6 px-6 font-bold text-slate-900 text-sm uppercase tracking-wider">Features</th>
+                                    <th className="text-left py-6 px-6 font-bold text-slate-900 text-sm uppercase tracking-wider">{t('pricing.table.features')}</th>
                                     <th className="text-center py-6 px-6 font-bold text-slate-900 text-sm">Starter</th>
                                     <th className="text-center py-6 px-6 font-bold text-[#255664] text-sm bg-[#255664]/5 relative">
-                                        <div className="absolute top-0 right-0 bg-[#255664] text-white text-[9px] font-bold px-2 py-0.5 rounded-bl uppercase tracking-wider">Popular</div>
-                                        Plus
+                                        <div className="absolute top-0 right-0 bg-[#255664] text-white text-[9px] font-bold px-2 py-0.5 rounded-bl uppercase tracking-wider">{t('pricing.labels.popular')}</div>
+                                        {t('pricing.plans.plus.name')}
                                     </th>
                                     <th className="text-center py-6 px-6 font-bold text-slate-900 text-sm">Advanced</th>
                                 </tr>
@@ -449,17 +450,17 @@ const Pricing: React.FC = () => {
                             <tbody className="divide-y divide-slate-100">
                                 {/* Core Features */}
                                 <tr className="bg-slate-50">
-                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">Core Features</td>
+                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">{t('pricing.table.coreFeatures')}</td>
                                 </tr>
                                 {[
-                                    { name: "Points Program", starter: true, plus: true, advanced: true },
-                                    { name: "Wallet Cards", starter: true, plus: true, advanced: true },
-                                    { name: "Referral Program", starter: true, plus: true, advanced: true },
-                                    { name: "Unlimited Push Notifications", starter: true, plus: true, advanced: true },
-                                    { name: "Customizable Emails", starter: true, plus: true, advanced: true },
-                                    { name: "Unlimited Integrations", starter: true, plus: true, advanced: true },
-                                    { name: "API Access", starter: true, plus: true, advanced: true },
-                                    { name: "Loyalty Master", starter: true, plus: true, advanced: true },
+                                    { name: t('features.items.points.title'), starter: true, plus: true, advanced: true },
+                                    { name: t('features.items.wallet.title'), starter: true, plus: true, advanced: true },
+                                    { name: t('features.items.referral.title'), starter: true, plus: true, advanced: true },
+                                    { name: t('pricing.labels.unlimitedPush'), starter: true, plus: true, advanced: true },
+                                    { name: t('pricing.labels.customEmails'), starter: true, plus: true, advanced: true },
+                                    { name: t('pricing.labels.unlimitedIntegrations'), starter: true, plus: true, advanced: true },
+                                    { name: t('pricing.labels.apiAccess'), starter: true, plus: true, advanced: true },
+                                    { name: t('pricing.labels.loyaltyMaster'), starter: true, plus: true, advanced: true },
                                 ].map((feature, i) => (
                                     <tr key={i} className="hover:bg-slate-50 transition-colors">
                                         <td className="py-4 px-6 text-sm text-slate-700">{feature.name}</td>
@@ -477,13 +478,13 @@ const Pricing: React.FC = () => {
 
                                 {/* Plus Features */}
                                 <tr className="bg-slate-50">
-                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">Plus Features</td>
+                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">{t('pricing.table.plusFeatures')}</td>
                                 </tr>
                                 {[
-                                    { name: "Customer Tiers", starter: false, plus: true, advanced: true },
-                                    { name: "Points Expiration", starter: false, plus: true, advanced: true },
-                                    { name: "Points Blocking", starter: false, plus: true, advanced: true },
-                                    { name: "Analytics Plus", starter: false, plus: true, advanced: true },
+                                    { name: t('features.items.tiers.title'), starter: false, plus: true, advanced: true },
+                                    { name: t('pricing.labels.pointsExpiration'), starter: false, plus: true, advanced: true },
+                                    { name: t('pricing.labels.pointsBlocking'), starter: false, plus: true, advanced: true },
+                                    { name: t('pricing.labels.analyticsPlus'), starter: false, plus: true, advanced: true },
                                 ].map((feature, i) => (
                                     <tr key={i} className="hover:bg-slate-50 transition-colors">
                                         <td className="py-4 px-6 text-sm text-slate-700">{feature.name}</td>
@@ -501,16 +502,16 @@ const Pricing: React.FC = () => {
 
                                 {/* Advanced Features */}
                                 <tr className="bg-slate-50">
-                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">Advanced Features</td>
+                                    <td colSpan={4} className="py-3 px-6 font-bold text-slate-900 text-xs uppercase tracking-wider">{t('pricing.table.advancedFeatures')}</td>
                                 </tr>
                                 {[
-                                    { name: "Automated Campaigns", starter: false, plus: false, advanced: true },
-                                    { name: "Workflows", starter: false, plus: false, advanced: true },
-                                    { name: "Customer Journeys", starter: false, plus: false, advanced: true },
-                                    { name: "Gamification", starter: false, plus: false, advanced: true },
-                                    { name: "Rewards Marketplace", starter: false, plus: false, advanced: true },
-                                    { name: "Digital Gift Cards", starter: false, plus: false, advanced: true },
-                                    { name: "Analytics Advanced", starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.campaigns.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.workflows.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.journeys.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.gamification.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.marketplace.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('features.items.giftcards.title'), starter: false, plus: false, advanced: true },
+                                    { name: t('pricing.labels.analyticsAdvanced'), starter: false, plus: false, advanced: true },
                                 ].map((feature, i) => (
                                     <tr key={i} className="hover:bg-slate-50 transition-colors">
                                         <td className="py-4 px-6 text-sm text-slate-700">{feature.name}</td>
@@ -531,17 +532,17 @@ const Pricing: React.FC = () => {
                                     <td className="py-6 px-6"></td>
                                     <td className="py-6 px-6 text-center">
                                         <a href="/signup" className="inline-block py-2.5 px-6 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-900 hover:bg-slate-50 transition-colors">
-                                            Start for free
+                                            {t('pricing.labels.startFree')}
                                         </a>
                                     </td>
                                     <td className="py-6 px-6 text-center bg-[#255664]/5">
                                         <a href="/signup" className="inline-block py-2.5 px-6 bg-[#255664] border border-transparent rounded-xl text-sm font-medium text-white hover:bg-[#1e4652] transition-colors">
-                                            Start for free
+                                            {t('pricing.labels.startFree')}
                                         </a>
                                     </td>
                                     <td className="py-6 px-6 text-center">
                                         <a href="/signup" className="inline-block py-2.5 px-6 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-900 hover:bg-slate-50 transition-colors">
-                                            Start for free
+                                            {t('pricing.labels.startFree')}
                                         </a>
                                     </td>
                                 </tr>

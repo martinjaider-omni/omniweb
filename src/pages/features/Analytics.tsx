@@ -52,7 +52,7 @@ const Analytics: React.FC = () => {
                     <Link to="/signup">
                         <Button size="lg">{t('featureDetail.analytics.ctaPrimary')}</Button>
                     </Link>
-                    <Link to="/contact">
+                    <Link to="/book-demo">
                         <Button variant="secondary" size="lg">{t('featureDetail.analytics.ctaSecondary')}</Button>
                     </Link>
                 </div>

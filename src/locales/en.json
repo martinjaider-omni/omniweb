@@ -4,9 +4,14 @@
         "solutions": "Solutions",
         "pricing": "Pricing",
         "resources": "Resources",
-        "login": "Login",
+        "bookDemo": "Book a Demo",
         "startFree": "Start for free",
-        "announcement": "New feature: Omniwallet Customer Journeys are live."
+        "announcement": "New feature: Omniwallet Customer Journeys are live.",
+        "megamenu": {
+            "core": "Core Platform",
+            "engagement": "Engagement",
+            "intelligence": "Intelligence"
+        }
     },
     "hero": {
         "badge": "New: Omniwallet 3.0 is live",
@@ -25,7 +30,7 @@
         ],
         "description": "The all-in-one platform to create, manage, and scale online, offline, and omnichannel customer loyalty programs with digital passes for Apple Wallet and Google Wallet.",
         "ctaPrimary": "Start for free",
-        "ctaSecondary": "Talk to sales",
+        "ctaSecondary": "Book a Demo",
         "noCreditCard": "No credit card required",
         "freeTrial": "100 activities free trial"
     },
@@ -52,7 +57,131 @@
         "terms": "Terms",
         "security": "Security",
         "allRightsReserved": "All rights reserved.",
-        "madeWith": "Made with ♥️ in Barcelona"
+        "madeWith": "Made with ♥️ in Barcelona",
+        "language": "Language",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "home": {
+        "featureTabs": {
+            "header": {
+                "title": "Everything you need to build <br />a world-class loyalty program.",
+                "subtitle": "Omniwallet gives you the building blocks to create powerful, mobile-first loyalty experiences without writing a single line of code."
+            },
+            "cta": {
+                "learnMore": "Learn more about {{feature}}",
+                "learnMoreSmall": "Learn more"
+            },
+            "items": {
+                "points": [
+                    "Configurable exchange rates",
+                    "Cashback functionality",
+                    "Dynamic point generation"
+                ],
+                "wallet": [
+                    "Native Apple & Google Wallet support",
+                    "Zero-friction installation",
+                    "Real-time dynamic updates"
+                ],
+                "tiers": [
+                    "Automated progression",
+                    "Exclusive tier rewards",
+                    "Reversible degradation rules"
+                ],
+                "market": [
+                    "Physical & digital rewards",
+                    "Automated fulfillment",
+                    "Coupon pools"
+                ],
+                "push": [
+                    "Geolocation triggers",
+                    "Wallet pass integration",
+                    "Segmented messaging"
+                ],
+                "gamification": [
+                    "Customizable prize wheels",
+                    "Probability control",
+                    "High-value prize integration"
+                ],
+                "automation": [
+                    "Win-back automation",
+                    "Birthday triggers",
+                    "Real-time execution"
+                ],
+                "analytics": [
+                    "Real-time ROI dashboards",
+                    "Cohort analysis",
+                    "Exportable reports"
+                ],
+                "journey": [
+                    "Visual flow builder",
+                    "Location-based triggers",
+                    "AB testing"
+                ],
+                "ropo": [
+                    "Offline sales attribution",
+                    "Geo-fenced coupons",
+                    "Store traffic measurement"
+                ]
+            }
+        }
+    },
+    "ticker": {
+        "title": "Trusted by innovative retailers worldwide"
+    },
+    "testimonials": {
+        "title": "Loved by innovative brands.",
+        "subtitle": "Don't just take our word for it. Here's what product teams are saying.",
+        "items": [
+            {
+                "quote": "Omniwallet completely transformed how we handle our loyalty program. The Apple Wallet integration is seamless and our customers love it.",
+                "author": "Sarah Jenkins",
+                "role": "Head of Marketing",
+                "company": "Acme Corp"
+            },
+            {
+                "quote": "We saw a 40% increase in retention within the first 3 months. The geolocation triggers are a game changer for foot traffic.",
+                "author": "David Chen",
+                "role": "Product Owner",
+                "company": "GlobalRetail"
+            },
+            {
+                "quote": "Finally, a loyalty platform that doesn't feel like legacy software. The API is a dream to work with and the support is stellar.",
+                "author": "Elena Rodriguez",
+                "role": "CTO",
+                "company": "TechStore"
+            }
+        ]
+    },
+    "common": {
+        "status": {
+            "active": "Active",
+            "installed": "Installed",
+            "pending": "Pending"
+        },
+        "tiers": {
+            "bronze": "Bronze",
+            "silver": "Silver",
+            "gold": "Gold",
+            "platinum": "Platinum"
+        },
+        "mock": {
+            "campaign": "Campaign",
+            "summerRewards": "Summer Rewards",
+            "dashboard": "Dashboard",
+            "members": "Members",
+            "campaigns": "Campaigns",
+            "walletPasses": "Wallet Passes",
+            "locations": "Locations",
+            "analytics": "Analytics",
+            "settings": "Settings",
+            "activeMembers": "Active Members",
+            "realTimeUsage": "Real-time wallet pass usage",
+            "member": "Member",
+            "status": "Status",
+            "tier": "Tier",
+            "points": "Points"
+        }
     },
     "bento": {
         "title": "Designed for the modern retailer.",
@@ -92,11 +221,97 @@
         },
         "seeAll": "See all integrations"
     },
+    "integrationsPage": {
+        "hero": {
+            "title": "Connect your entire ecosystem",
+            "subtitle": "Seamlessly integrate with the platforms you already use to create a unified customer experience."
+        },
+        "search": {
+            "placeholder": "Search integrations..."
+        },
+        "categories": {
+            "all": "All Integrations",
+            "ecommerce": "E-Commerce",
+            "pos": "POS & ERP",
+            "crm": "CRM & Marketing",
+            "automation": "Automation",
+            "chatbot": "Chatbots"
+        },
+        "cta": {
+            "title": "Don't see your platform?",
+            "subtitle": "We are constantly adding new integrations. Contact us for custom solutions.",
+            "button": "Contact support"
+        },
+        "items": {
+            "shopify": {
+                "desc": "Sync your products, customers, and orders to drive repurchase in real-time."
+            },
+            "woocommerce": {
+                "desc": "Automate loyalty points and rewards for your WordPress store."
+            },
+            "magento": {
+                "desc": "Enterprise-grade loyalty integration for complex Adobe Commerce setups."
+            },
+            "bigcommerce": {
+                "desc": "Scale your loyalty program with headless commerce capabilities."
+            },
+            "prestashop": {
+                "desc": "Native connector for PrestaShop stores to sync customer data."
+            },
+            "stockagile": {
+                "desc": "Connect your physical stores with your digital loyalty engine."
+            },
+            "klaviyo": {
+                "desc": "Power your email marketing with real-time loyalty data and segments."
+            },
+            "connectif": {
+                "desc": "Omnichannel marketing automation powered by loyalty insights."
+            },
+            "make": {
+                "desc": "Connect Omniwallet to 1000+ apps with a visual workflow builder."
+            },
+            "status2": {
+                "desc": "Integrated POS solutions for specialized retail brands."
+            },
+            "salesmanago": {
+                "desc": "AI-driven marketing automation and CDP for e-commerce."
+            },
+            "brevo": {
+                "desc": "All-in-one marketing platform to build customer relationships."
+            },
+            "stmoda": {
+                "desc": "Specialized POS software for the fashion and retail industry."
+            },
+            "agora": {
+                "desc": "High-performance TPV software for hospitality and retail."
+            },
+            "a3innuva": {
+                "desc": "Cloud-based ERP and accounting software for business management."
+            },
+            "oct8ne": {
+                "desc": "Visual conversational commerce to boost sales and support."
+            },
+            "n8n": {
+                "desc": "Fair-code workflow automation tool to build powerful node-based integrations."
+            },
+            "logicommerce": {
+                "desc": "SaaS E-commerce platform for high-performance online businesses."
+            },
+            "vtex": {
+                "desc": "The enterprise digital commerce platform to accelerate your business growth."
+            },
+            "gorgias": {
+                "desc": "Everything-in-one customer service platform for e-commerce brands."
+            },
+            "viewDocs": "View integration docs",
+            "comingSoon": "Coming Soon"
+        }
+    },
     "cta": {
         "title": "Ready to transform your loyalty?",
         "subtitle": "Join hundreds of brands already increasing recurrence with Omniwallet.",
         "startFree": "Start for free today",
-        "talkSales": "Talk to sales",
+        "talkSales": "Book a Demo",
         "noCreditCard": "No credit card required. 100 activities free."
     },
     "features": {
@@ -156,7 +371,7 @@
                 "desc": "Add game mechanics to boost engagement and retention."
             },
             "marketplace": {
-                "title": "Rewards Marketplace",
+                "title": "Rewards",
                 "desc": "Let customers redeem points for products, discounts, and experiences."
             },
             "giftcards": {
@@ -164,7 +379,7 @@
                 "desc": "Sell and manage digital gift cards directly in the wallet."
             },
             "analytics": {
-                "title": "Advanced Analytics",
+                "title": "Analytics",
                 "desc": "Deep insights into customer behavior, ROI, and program performance."
             },
             "ropo": {
@@ -208,7 +423,23 @@
             "popular": "Popular",
             "custom": "Custom",
             "everythingIn": "Everything in {{plan}}, plus:",
-            "startFree": "Start for free"
+            "startFree": "Start for free",
+            "talkSales": "Book a Demo",
+            "noCreditCard": "No credit card required. 100 activities free.",
+            "unlimitedPush": "Unlimited Push Notif.",
+            "customEmails": "Customizable Emails",
+            "unlimitedIntegrations": "Unlimited Integrations",
+            "apiAccess": "API Access",
+            "loyaltyMaster": "Loyalty Master",
+            "pointsExpiration": "Points Expiration",
+            "pointsBlocking": "Points Blocking",
+            "analyticsPlus": "Analytics Plus",
+            "analyticsAdvanced": "Analytics Advanced",
+            "customIntegrations": "Custom Integrations",
+            "strategicConsulting": "Strategic Consulting",
+            "successManager": "Dedicated Success Manager",
+            "prioritySupport": "Priority Support",
+            "migration": "Assisted Migration"
         },
         "calculator": {
             "pricePerActivity": "Price per activity",
@@ -228,11 +459,17 @@
                 "totalActivityCost": "Total Activity Cost",
                 "activityCost": "Activity Cost",
                 "totalMonthly": "Total Monthly"
+            },
+            "ranges": {
+                "upTo": "Up to {{count}}",
+                "between": "{{start}} to {{end}}",
+                "andUp": "{{count}}+"
             }
         },
         "table": {
             "title": "Compare all features",
             "subtitle": "Choose the plan that's right for your business",
+            "features": "Features",
             "coreFeatures": "Core Features",
             "plusFeatures": "Plus Features",
             "advancedFeatures": "Advanced Features"
@@ -359,7 +596,7 @@
         },
         "loyaltyMarket": {
             "title": "Loyalty Market",
-            "description": "An out-of-the-box rewards marketplace. Activate a complete loyalty program from day one without operational complexity.",
+            "description": "An out-of-the-box loyalty program with rewards. Activate it from day one without operational complexity.",
             "diverseTitle": "Diverse Reward Types",
             "diverseDesc": "Offer physical products, digital goods, coupon pools for eCommerce, and combine your own prizes with third-party rewards.",
             "brandsTitle": "Leading Brands Integrated",
@@ -440,7 +677,7 @@
         },
         "analytics": {
             "backButton": "Back to Home",
-            "title": "Advanced Analytics",
+            "title": "Analytics",
             "description": "Measure the true ROI of your loyalty program. Track retention, average order value, and customer lifetime value in real-time.",
             "capabilitiesTitle": "Key Capabilities",
             "capabilitiesItems": [

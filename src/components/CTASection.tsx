@@ -21,9 +21,11 @@ const CTASection: React.FC = () => {
                      {t('cta.startFree')}
                   </Button>
                </Link>
-               <Button variant="secondary" size="lg" className="rounded-xl px-10 h-14 text-lg">
-                  {t('cta.talkSales')}
-               </Button>
+               <Link to="/book-demo">
+                  <Button variant="secondary" size="lg" className="rounded-xl px-10 h-14 text-lg">
+                     {t('cta.talkSales')}
+                  </Button>
+               </Link>
             </div>
             <p className="mt-6 text-sm text-slate-400">
                {t('cta.noCreditCard')}

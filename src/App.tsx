@@ -7,6 +7,7 @@ import SolutionsPage from './pages/Solutions'; // Renamed to SolutionsPage for c
 import PricingPage from './pages/Pricing'; // Renamed to PricingPage for clarity in new routing
 import CompanyPage from './pages/Company'; // Renamed to CompanyPage for clarity in new routing
 import ContactPage from './pages/Contact'; // Renamed to ContactPage for clarity in new routing
+import IntegrationsPage from './pages/Integrations';
 import PointsProgram from './pages/features/PointsProgram';
 import WalletCards from './pages/features/WalletCards'; // New Import
 import CustomerTiers from './pages/features/CustomerTiers';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
           <Route path="pricing" element={<PricingPage />} />
           <Route path="company" element={<CompanyPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="integrations" element={<IntegrationsPage />} />
 
           {/* Feature Detail Pages */}
           <Route path="features/wallet-cards" element={<WalletCards />} />

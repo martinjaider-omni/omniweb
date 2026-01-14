@@ -1,11 +1,15 @@
 import React from 'react';
-import { Wallet, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Wallet, Twitter, Linkedin, Instagram, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logoUrl from '../assets/logo.png';
 
 const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(e.target.value);
+  };
 
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
@@ -71,7 +75,18 @@ const Footer: React.FC = () => {
           <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} Omniwallet Inc. {t('footer.allRightsReserved')}
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
+          <div className="flex items-center gap-6 text-sm text-slate-500">
+            <div className="flex items-center gap-2">
+              <Globe size={14} className="text-slate-400" />
+              <select
+                value={i18n.language}
+                onChange={handleLanguageChange}
+                className="bg-transparent border-none text-slate-500 focus:ring-0 cursor-pointer hover:text-slate-900 transition-colors appearance-none"
+              >
+                <option value="en">{t('footer.english')}</option>
+                <option value="es">{t('footer.spanish')}</option>
+              </select>
+            </div>
             <span>{t('footer.madeWith')}</span>
           </div>
         </div>

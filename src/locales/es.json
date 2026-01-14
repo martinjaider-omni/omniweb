@@ -4,9 +4,14 @@
         "solutions": "Soluciones",
         "pricing": "Precios",
         "resources": "Recursos",
-        "login": "Iniciar sesión",
+        "bookDemo": "Reservar Demo",
         "startFree": "Empezar gratis",
-        "announcement": "Nueva función: Omniwallet Customer Journeys ya están disponibles."
+        "announcement": "Nueva función: Omniwallet Customer Journeys ya están disponibles.",
+        "megamenu": {
+            "core": "Plataforma Core",
+            "engagement": "Engagement",
+            "intelligence": "Inteligencia"
+        }
     },
     "hero": {
         "badge": "Nuevo: Omniwallet 3.0 ya está disponible",
@@ -25,7 +30,7 @@
         ],
         "description": "La plataforma todo en uno para crear, gestionar y escalar programas de fidelización de clientes online, offline y omnicanal con pases digitales para Apple Wallet y Google Wallet.",
         "ctaPrimary": "Empezar gratis",
-        "ctaSecondary": "Hablar con ventas",
+        "ctaSecondary": "Reservar Demo",
         "noCreditCard": "Sin tarjeta de crédito",
         "freeTrial": "100 actividades de prueba gratis"
     },
@@ -52,7 +57,131 @@
         "terms": "Términos",
         "security": "Seguridad",
         "allRightsReserved": "Todos los derechos reservados.",
-        "madeWith": "Hecho con ♥️ en Barcelona"
+        "madeWith": "Hecho con ♥️ en Barcelona",
+        "language": "Idioma",
+        "english": "Inglés",
+        "spanish": "Español"
+    },
+    "home": {
+        "featureTabs": {
+            "header": {
+                "title": "Todo lo que necesitas para construir <br />un programa de fidelización de clase mundial.",
+                "subtitle": "Omniwallet te ofrece las piezas fundamentales para crear experiencias de fidelización potentes, pensadas para el móvil y sin escribir una sola línea de código."
+            },
+            "cta": {
+                "learnMore": "Saber más sobre {{feature}}",
+                "learnMoreSmall": "Saber más"
+            },
+            "items": {
+                "points": [
+                    "Tasas de cambio configurables",
+                    "Funcionalidad de cashback",
+                    "Generación dinámica de puntos"
+                ],
+                "wallet": [
+                    "Soporte nativo Apple y Google Wallet",
+                    "Instalación sin fricción",
+                    "Actualizaciones dinámicas en tiempo real"
+                ],
+                "tiers": [
+                    "Progresión automatizada",
+                    "Recompensas exclusivas de nivel",
+                    "Reglas de degradación reversibles"
+                ],
+                "market": [
+                    "Recompensas físicas y digitales",
+                    "Cumplimiento automatizado",
+                    "Pools de cupones"
+                ],
+                "push": [
+                    "Triggers de geolocalización",
+                    "Integración con pases de Wallet",
+                    "Mensajería segmentada"
+                ],
+                "gamification": [
+                    "Ruletas de premios personalizables",
+                    "Control de probabilidad",
+                    "Integración de premios de alto valor"
+                ],
+                "automation": [
+                    "Automatización de recuperación",
+                    "Triggers de cumpleaños",
+                    "Ejecución en tiempo real"
+                ],
+                "analytics": [
+                    "Dashboards de ROI en tiempo real",
+                    "Análisis de cohortes",
+                    "Informes exportables"
+                ],
+                "journey": [
+                    "Constructor de flujos visual",
+                    "Triggers basados en ubicación",
+                    "Tests AB"
+                ],
+                "ropo": [
+                    "Atribución de ventas offline",
+                    "Cupones geovallados",
+                    "Medición de tráfico en tienda"
+                ]
+            }
+        }
+    },
+    "ticker": {
+        "title": "Con la confianza de minoristas innovadores de todo el mundo"
+    },
+    "testimonials": {
+        "title": "Amado por marcas innovadoras.",
+        "subtitle": "No solo lo decimos nosotros. Esto es lo que dicen los equipos de producto.",
+        "items": [
+            {
+                "quote": "Omniwallet transformó completamente la forma en que manejamos nuestro programa de fidelización. La integración con Apple Wallet es perfecta y a nuestros clientes les encanta.",
+                "author": "Sarah Jenkins",
+                "role": "Directora de Marketing",
+                "company": "Acme Corp"
+            },
+            {
+                "quote": "Vimos un aumento del 40% en la retención en los primeros 3 meses. Los activadores por geolocalización son un cambio de juego para el tráfico en tienda.",
+                "author": "David Chen",
+                "role": "Product Owner",
+                "company": "GlobalRetail"
+            },
+            {
+                "quote": "Finalmente, una plataforma de fidelización que no parece software antiguo. La API es un sueño para trabajar y el soporte es estelar.",
+                "author": "Elena Rodriguez",
+                "role": "CTO",
+                "company": "TechStore"
+            }
+        ]
+    },
+    "common": {
+        "status": {
+            "active": "Activo",
+            "installed": "Instalado",
+            "pending": "Pendiente"
+        },
+        "tiers": {
+            "bronze": "Bronce",
+            "silver": "Plata",
+            "gold": "Oro",
+            "platinum": "Platino"
+        },
+        "mock": {
+            "campaign": "Campaña",
+            "summerRewards": "Recompensas de Verano",
+            "dashboard": "Panel de control",
+            "members": "Miembros",
+            "campaigns": "Campañas",
+            "walletPasses": "Pases de Wallet",
+            "locations": "Ubicaciones",
+            "analytics": "Analítica",
+            "settings": "Ajustes",
+            "activeMembers": "Miembros Activos",
+            "realTimeUsage": "Uso de pases en tiempo real",
+            "member": "Miembro",
+            "status": "Estado",
+            "tier": "Nivel",
+            "points": "Puntos"
+        }
     },
     "bento": {
         "title": "Diseñado para el minorista moderno.",
@@ -92,11 +221,97 @@
         },
         "seeAll": "Ver todas las integraciones"
     },
+    "integrationsPage": {
+        "hero": {
+            "title": "Conecta todo tu ecosistema",
+            "subtitle": "Intégrate sin problemas con las plataformas que ya utilizas para crear una experiencia de cliente unificada."
+        },
+        "search": {
+            "placeholder": "Buscar integraciones..."
+        },
+        "categories": {
+            "all": "Todas las integraciones",
+            "ecommerce": "E-Commerce",
+            "pos": "TPV y ERP",
+            "crm": "CRM y Marketing",
+            "automation": "Automatización",
+            "chatbot": "Chatbots"
+        },
+        "cta": {
+            "title": "¿No ves tu plataforma?",
+            "subtitle": "Estamos añadiendo nuevas integraciones constantemente. Contáctanos para soluciones personalizadas.",
+            "button": "Contactar soporte"
+        },
+        "items": {
+            "shopify": {
+                "desc": "Sincroniza tus productos, clientes y pedidos para potenciar la recompra en tiempo real."
+            },
+            "woocommerce": {
+                "desc": "Automatiza puntos de fidelidad y recompensas para tu tienda WordPress."
+            },
+            "magento": {
+                "desc": "Integración de fidelidad de nivel empresarial para configuraciones complejas de Adobe Commerce."
+            },
+            "bigcommerce": {
+                "desc": "Escala tu programa de fidelización con capacidades de comercio headless."
+            },
+            "prestashop": {
+                "desc": "Conector nativo para tiendas PrestaShop para sincronizar datos de clientes."
+            },
+            "stockagile": {
+                "desc": "Conecta tus tiendas físicas con tu motor de fidelización digital."
+            },
+            "klaviyo": {
+                "desc": "Potencia tu marketing por correo electrónico con datos y segmentos de fidelidad en tiempo real."
+            },
+            "connectif": {
+                "desc": "Automatización de marketing omnicanal impulsada por insights de fidelización."
+            },
+            "make": {
+                "desc": "Conecta Omniwallet con más de 1000 apps con un constructor de flujos visual."
+            },
+            "status2": {
+                "desc": "Soluciones de TPV integradas para marcas de retail especializadas."
+            },
+            "salesmanago": {
+                "desc": "Automatización de marketing impulsada por IA y CDP para e-commerce."
+            },
+            "brevo": {
+                "desc": "Plataforma de marketing todo en uno para construir relaciones con clientes."
+            },
+            "stmoda": {
+                "desc": "Software de TPV especializado para la industria de la moda y retail."
+            },
+            "agora": {
+                "desc": "Software de TPV de alto rendimiento para hostelería y retail."
+            },
+            "a3innuva": {
+                "desc": "Software de ERP y contabilidad en la nube para gestión empresarial."
+            },
+            "oct8ne": {
+                "desc": "Comercio conversacional visual para potenciar ventas y soporte."
+            },
+            "n8n": {
+                "desc": "Herramienta de automatización de flujos de trabajo fair-code para construir integraciones potentes basadas en nodos."
+            },
+            "logicommerce": {
+                "desc": "Plataforma de E-commerce SaaS para negocios online de alto rendimiento."
+            },
+            "vtex": {
+                "desc": "La plataforma de comercio digital empresarial para acelerar el crecimiento de tu negocio."
+            },
+            "gorgias": {
+                "desc": "Plataforma de atención al cliente todo en uno para marcas de e-commerce."
+            },
+            "viewDocs": "Ver docs de integración",
+            "comingSoon": "Próximamente"
+        }
+    },
     "cta": {
         "title": "¿Listo para transformar tu fidelización?",
         "subtitle": "Únete a cientos de marcas que ya están aumentando su recurrencia con Omniwallet.",
         "startFree": "Empezar gratis hoy",
-        "talkSales": "Hablar con ventas",
+        "talkSales": "Reservar Demo",
         "noCreditCard": "Sin tarjeta de crédito. 100 actividades gratis."
     },
     "features": {
@@ -124,7 +339,7 @@
                 "desc": "Recompensa a tus clientes con puntos por cada compra y acción que realicen."
             },
             "wallet": {
-                "title": "Tarjetas de Billetera",
+                "title": "Wallet Cards",
                 "desc": "Crea hermosas tarjetas digitales para Apple Wallet y Google Wallet."
             },
             "referral": {
@@ -148,7 +363,7 @@
                 "desc": "Construye flujos de automatización complejos con nuestro editor visual."
             },
             "journeys": {
-                "title": "Viajes del Cliente",
+                "title": "Customer Journeys",
                 "desc": "Mapea y optimiza cada punto de contacto en la experiencia de tu cliente."
             },
             "gamification": {
@@ -156,7 +371,7 @@
                 "desc": "Añade mecánicas de juego para aumentar el compromiso y la retención."
             },
             "marketplace": {
-                "title": "Marketplace de Recompensas",
+                "title": "Recompensas",
                 "desc": "Permite que los clientes canjeen puntos por productos, descuentos y experiencias."
             },
             "giftcards": {
@@ -164,7 +379,7 @@
                 "desc": "Vende y gestiona tarjetas de regalo digitales directamente en la billetera."
             },
             "analytics": {
-                "title": "Analítica Avanzada",
+                "title": "Analítica",
                 "desc": "Información profunda sobre el comportamiento del cliente, ROI y rendimiento del programa."
             },
             "ropo": {
@@ -208,7 +423,23 @@
             "popular": "Popular",
             "custom": "Personalizado",
             "everythingIn": "Todo lo de {{plan}}, más:",
-            "startFree": "Empezar gratis"
+            "startFree": "Empezar gratis",
+            "talkSales": "Reservar Demo",
+            "noCreditCard": "Sin tarjeta de crédito. 100 actividades gratis.",
+            "unlimitedPush": "Notif. Push Ilimitadas",
+            "customEmails": "Emails Personalizables",
+            "unlimitedIntegrations": "Integraciones Ilimitadas",
+            "apiAccess": "Acceso API",
+            "loyaltyMaster": "Loyalty Master",
+            "pointsExpiration": "Caducidad de Puntos",
+            "pointsBlocking": "Bloqueo de Puntos",
+            "analyticsPlus": "Analítica Plus",
+            "analyticsAdvanced": "Analítica Advanced",
+            "customIntegrations": "Integraciones a Medida",
+            "strategicConsulting": "Consultoría Estratégica",
+            "successManager": "Gestor de Éxito Dedicado",
+            "prioritySupport": "Soporte Prioritario",
+            "migration": "Migración Asistida"
         },
         "calculator": {
             "pricePerActivity": "Precio por actividad",
@@ -228,11 +459,17 @@
                 "totalActivityCost": "Coste Total de Actividad",
                 "activityCost": "Coste de Actividad",
                 "totalMonthly": "Total Mensual"
+            },
+            "ranges": {
+                "upTo": "Hasta {{count}}",
+                "between": "{{start}} a {{end}}",
+                "andUp": "{{count}}+"
             }
         },
         "table": {
             "title": "Compara todas las funcionalidades",
             "subtitle": "Elige el plan adecuado para tu negocio",
+            "features": "Funcionalidades",
             "coreFeatures": "Funcionalidades Core",
             "plusFeatures": "Funcionalidades Plus",
             "advancedFeatures": "Funcionalidades Advanced"
@@ -440,7 +677,7 @@
         },
         "analytics": {
             "backButton": "Volver al inicio",
-            "title": "Analítica Avanzada",
+            "title": "Analítica",
             "description": "Mide el ROI real de tu programa de fidelización. Realiza un seguimiento de la retención, el valor medio del pedido y el valor de vida del cliente en tiempo real.",
             "capabilitiesTitle": "Capacidades Clave",
             "capabilitiesItems": [

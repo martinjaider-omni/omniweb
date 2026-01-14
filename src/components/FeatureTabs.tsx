@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   CreditCard,
@@ -16,6 +15,7 @@ import {
   Globe
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from './ui/Button';
 import FeatureVisuals from './FeatureVisuals';
 
@@ -23,89 +23,90 @@ import FeatureVisuals from './FeatureVisuals';
 type FeatureKey = 'wallet' | 'points' | 'tiers' | 'market' | 'push' | 'gamification' | 'automation' | 'analytics' | 'journey' | 'ropo';
 
 const FeatureTabs: React.FC = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<FeatureKey>('points');
 
-  // Configuration for all 8 features
+  // Configuration for all features
   const features = {
     points: {
-      label: "Points Program",
+      label: t('features.items.points.title'),
       icon: <CreditCard />,
-      title: "Advanced Points Program",
-      description: "Design a flexible reward system. Define custom exchange rates, use points as cashback, and trigger earnings based on transaction details, key moments, or user data.",
+      title: t('features.items.points.title'),
+      description: t('features.items.points.desc'),
       link: "/features/points-program",
-      items: ["Configurable exchange rates", "Cashback functionality", "Dynamic point generation"]
+      items: t('home.featureTabs.items.points', { returnObjects: true }) as string[]
     },
     wallet: {
-      label: "Wallet Cards",
+      label: t('features.items.wallet.title'),
       icon: <Wallet />,
-      title: "Wallet Loyalty Cards",
-      description: "No apps to download. Create beautiful, branded digital passes that live in Apple Wallet and Google Wallet. Update balance and status in real-time.",
+      title: t('features.items.wallet.title'),
+      description: t('features.items.wallet.desc'),
       link: "/features/wallet-cards",
-      items: ["Native Apple & Google Wallet support", "Zero-friction installation", "Real-time dynamic updates"]
+      items: t('home.featureTabs.items.wallet', { returnObjects: true }) as string[]
     },
     tiers: {
-      label: "Customer Tiers",
+      label: t('features.items.tiers.title'),
       icon: <Users />,
-      title: "Smart Customer Tiers",
-      description: "Segment users by value. Offer exclusive rewards, point multipliers, and VIP benefits. Automate tier progression and maintenance based on real-time activity.",
+      title: t('features.items.tiers.title'),
+      description: t('features.items.tiers.desc'),
       link: "/features/customer-tiers",
-      items: ["Automated progression", "Exclusive tier rewards", "Reversible degradation rules"]
+      items: t('home.featureTabs.items.tiers', { returnObjects: true }) as string[]
     },
     market: {
-      label: "Loyalty Market",
+      label: t('features.items.marketplace.title'),
       icon: <ShoppingBag />,
-      title: "Loyalty Marketplace",
-      description: "An out-of-the-box rewards catalog. Offer physical products, digital goods, and coupons. Fully integrated fulfillment eliminates operational headaches.",
+      title: t('features.items.marketplace.title'),
+      description: t('features.items.marketplace.desc'),
       link: "/features/loyalty-market",
-      items: ["Physical & digital rewards", "Automated fulfillment", "Coupon pools"]
+      items: t('home.featureTabs.items.market', { returnObjects: true }) as string[]
     },
     push: {
-      label: "Push Notifications",
+      label: t('features.items.push.title'),
       icon: <Bell />,
-      title: "Direct Push Notifications",
-      description: "Reach customers directly on their digital wallet passes. Send mass updates or personalized, geo-triggered messages to drive foot traffic.",
+      title: t('features.items.push.title'),
+      description: t('features.items.push.desc'),
       link: "/features/push-notifications",
-      items: ["Geolocation triggers", "Wallet pass integration", "Segmented messaging"]
+      items: t('home.featureTabs.items.push', { returnObjects: true }) as string[]
     },
     gamification: {
-      label: "Gamification",
+      label: t('features.items.gamification.title'),
       icon: <Dices />,
-      title: "Engagement Gamification",
-      description: "Spin-to-win wheels and interactive games. Turn routine interactions into exciting moments to boost engagement and purchase frequency.",
+      title: t('features.items.gamification.title'),
+      description: t('features.items.gamification.desc'),
       link: "/features/gamification",
-      items: ["Customizable prize wheels", "Probability control", "High-value prize integration"]
+      items: t('home.featureTabs.items.gamification', { returnObjects: true }) as string[]
     },
     automation: {
-      label: "Automation",
+      label: t('features.items.campaigns.title'),
       icon: <Zap />,
-      title: "Automated Campaigns",
-      description: "Set-and-forget marketing logic. Automate birthdays, win-backs, and purchase milestones. Omniwallet handles the execution in real-time.",
+      title: t('features.items.campaigns.title'),
+      description: t('features.items.campaigns.desc'),
       link: "/features/automated-campaigns",
-      items: ["Win-back automation", "Birthday triggers", "Real-time execution"]
+      items: t('home.featureTabs.items.automation', { returnObjects: true }) as string[]
     },
     analytics: {
-      label: "Analytics",
+      label: t('features.items.analytics.title'),
       icon: <BarChart3 />,
-      title: "Advanced Analytics",
-      description: "Track the true ROI of your loyalty program. Monitor redemption rates, average order value, and customer lifetime value in real-time.",
+      title: t('features.items.analytics.title'),
+      description: t('features.items.analytics.desc'),
       link: "/features/analytics",
-      items: ["Real-time ROI dashboards", "Cohort analysis", "Exportable reports"]
+      items: t('home.featureTabs.items.analytics', { returnObjects: true }) as string[]
     },
     journey: {
-      label: "Journey Builder",
+      label: t('features.items.journeys.title'),
       icon: <Users />,
-      title: "Customer Journey Builder",
-      description: "Map out multi-step customer experiences. Trigger actions based on location, spending behavior, or time elapsed since last visit.",
+      title: t('features.items.journeys.title'),
+      description: t('features.items.journeys.desc'),
       link: "/features/customer-journey",
-      items: ["Visual flow builder", "Location-based triggers", "AB testing"]
+      items: t('home.featureTabs.items.journey', { returnObjects: true }) as string[]
     },
     ropo: {
-      label: "ROPO",
+      label: t('features.items.ropo.title'),
       icon: <Globe />,
-      title: "ROPO: Research Online, Purchase Offline",
-      description: "Close the loop between the online and offline worlds. Attribute physical sales to your digital campaigns and offer incentives for users to visit your stores.",
+      title: t('features.items.ropo.title'),
+      description: t('features.items.ropo.desc'),
       link: "/features/ropo",
-      items: ["Offline sales attribution", "Geo-fenced coupons", "Store traffic measurement"]
+      items: t('home.featureTabs.items.ropo', { returnObjects: true }) as string[]
     }
   };
 
@@ -115,11 +116,10 @@ const FeatureTabs: React.FC = () => {
 
         {/* Section Header */}
         <div className="mb-12 md:text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6">
-            Everything you need to build <br />a world-class loyalty program.
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6" dangerouslySetInnerHTML={{ __html: t('home.featureTabs.header.title') }}>
           </h2>
           <p className="text-lg text-slate-500">
-            Omniwallet gives you the building blocks to create powerful, mobile-first loyalty experiences without writing a single line of code.
+            {t('home.featureTabs.header.subtitle')}
           </p>
         </div>
 
@@ -172,7 +172,7 @@ const FeatureTabs: React.FC = () => {
             <div className="pt-4">
               <Link to={features[activeTab].link}>
                 <Button variant="outline">
-                  Learn more about {features[activeTab].label} <ArrowRight className="w-4 h-4 ml-2" />
+                  {t('home.featureTabs.cta.learnMore', { feature: features[activeTab].label })} <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
             </div>

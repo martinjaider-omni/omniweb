@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     CreditCard,
     Wallet,
@@ -23,6 +24,7 @@ interface FeatureVisualsProps {
 }
 
 const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
+    const { t } = useTranslation();
     const Container: React.FC<{ children: React.ReactNode; noPadding?: boolean }> = ({ children, noPadding }) => (
         <div className={`relative w-full max-w-sm aspect-square bg-white rounded-2xl shadow-xl border border-slate-100 ${noPadding ? '' : 'p-8'} flex flex-col items-center justify-center overflow-hidden select-none`}>
             <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 to-transparent rounded-2xl -z-10"></div>
@@ -41,8 +43,8 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                             <div className="absolute bottom-0 left-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl -ml-6 -mb-6"></div>
 
                             <div className="relative z-10">
-                                <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest mb-0.5">How to earn</div>
-                                <div className="text-xl font-bold text-white">Points</div>
+                                <div className="text-[10px] font-bold text-white/50 uppercase tracking-widest mb-0.5">{t('visuals.earnPoints')}</div>
+                                <div className="text-xl font-bold text-white">{t('visuals.points')}</div>
                             </div>
                         </div>
 
@@ -53,28 +55,28 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                                     <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                                         <UserPlus size={14} />
                                     </div>
-                                    <div className="text-[11px] font-bold text-slate-900">100 Points</div>
+                                    <div className="text-[11px] font-bold text-slate-900">100 {t('visuals.points')}</div>
                                     <div className="w-8 h-1 bg-slate-100 rounded-full"></div>
                                 </div>
                                 <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
                                     <div className="w-7 h-7 rounded-full bg-amber-50 flex items-center justify-center text-amber-500">
                                         <Star size={14} />
                                     </div>
-                                    <div className="text-[11px] font-bold text-slate-900">40 Points</div>
+                                    <div className="text-[11px] font-bold text-slate-900">40 {t('visuals.points')}</div>
                                     <div className="w-10 h-1 bg-slate-100 rounded-full"></div>
                                 </div>
                                 <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
                                     <div className="w-7 h-7 rounded-full bg-pink-50 flex items-center justify-center text-pink-500">
                                         <Cake size={14} />
                                     </div>
-                                    <div className="text-[11px] font-bold text-slate-900">30 Points</div>
+                                    <div className="text-[11px] font-bold text-slate-900">30 {t('visuals.points')}</div>
                                     <div className="w-6 h-1 bg-slate-100 rounded-full"></div>
                                 </div>
                                 <div className="bg-white border border-slate-100 rounded-xl p-3 shadow-sm flex flex-col items-start gap-1.5 transform hover:scale-[1.02] transition-transform">
                                     <div className="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center text-slate-900">
                                         <Instagram size={14} />
                                     </div>
-                                    <div className="text-[11px] font-bold text-slate-900">50 Points</div>
+                                    <div className="text-[11px] font-bold text-slate-900">50 {t('visuals.points')}</div>
                                     <div className="w-8 h-1 bg-slate-100 rounded-full"></div>
                                 </div>
                             </div>
@@ -90,13 +92,11 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                                         <div className="w-12 h-1 bg-slate-200 rounded-full"></div>
                                         <div className="w-20 h-1 bg-slate-200 rounded-full"></div>
                                     </div>
-                                    <div className="flex justify-between items-end">
-                                        <div className="flex items-center gap-1.5 text-slate-900 font-bold text-[10px] uppercase">
-                                            <Gift size={10} className="text-pink-500" />
-                                            Earn 210 pts
-                                        </div>
-                                        <div className="text-[9px] font-bold text-slate-400">60 EUR</div>
+                                    <div className="flex items-center gap-1.5 text-slate-900 font-bold text-[10px] uppercase">
+                                        <Gift size={10} className="text-pink-500" />
+                                        Earn 210 pts
                                     </div>
+                                    <div className="text-[9px] font-bold text-slate-400">60 EUR</div>
                                 </div>
                             </div>
                         </div>
@@ -120,11 +120,11 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
 
                             <div className="flex justify-between items-start">
                                 <div className="w-8 h-8 rounded bg-white/10"></div>
-                                <div className="text-[10px] uppercase tracking-wider opacity-70">Loyalty Pass</div>
+                                <div className="text-[10px] uppercase tracking-wider opacity-70">{t('visuals.loyaltyPass')}</div>
                             </div>
                             <div>
-                                <div className="text-xs opacity-70 mb-1">Balance</div>
-                                <div className="text-xl font-bold">5,000 Pts</div>
+                                <div className="text-xs opacity-70 mb-1">{t('visuals.balance')}</div>
+                                <div className="text-xl font-bold">5,000 {t('visuals.points')}</div>
                             </div>
                         </div>
                         <div className="flex justify-center mt-6 gap-2">
@@ -146,7 +146,7 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                         {/* Tier Card */}
                         <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm relative overflow-hidden">
                             <div className="flex justify-between items-center mb-4">
-                                <span className="text-xs font-bold uppercase tracking-wider text-amber-500 bg-amber-50 px-2 py-1 rounded">Gold Member</span>
+                                <span className="text-xs font-bold uppercase tracking-wider text-amber-500 bg-amber-50 px-2 py-1 rounded">{t('visuals.goldMember')}</span>
                                 <Users size={16} className="text-slate-400" />
                             </div>
                             <div className="w-full bg-slate-100 h-2 rounded-full mb-2 overflow-hidden">
@@ -154,7 +154,7 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                             </div>
                             <div className="flex justify-between text-[10px] text-slate-500 font-medium">
                                 <span>1,200 pts</span>
-                                <span>Next: Platinum (1,500)</span>
+                                <span>{t('visuals.nextPlatinum')} (1,500)</span>
                             </div>
                         </div>
 
@@ -214,8 +214,8 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                                 </div>
                                 <span className="text-[9px] text-white/40">Now</span>
                             </div>
-                            <div className="text-xs font-medium text-white mb-0.5">Welcome nearby! 👋</div>
-                            <div className="text-[10px] text-white/70 leading-tight">Pop in for 2x points on all coffees today until 2PM.</div>
+                            <div className="text-xs font-medium text-white mb-0.5">{t('visuals.welcomeNearby')}</div>
+                            <div className="text-[10px] text-white/70 leading-tight">{t('visuals.popInOffer')}</div>
                         </div>
 
                         {/* Dummy Background content */}
@@ -233,7 +233,7 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                     <div className="relative w-56 aspect-[1.6/1] bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden text-center flex flex-col items-center justify-center p-4">
                         <div className="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
                         <Gift size={32} className="text-emerald-500 mb-2" />
-                        <div className="font-bold text-slate-900">Gift Card</div>
+                        <div className="font-bold text-slate-900">{t('features.items.giftcards.title')}</div>
                         <div className="text-xs text-slate-500">$50.00 Value</div>
                         <div className="mt-3 text-[10px] font-mono text-slate-400 bg-slate-50 px-2 py-1 rounded border border-slate-100">
                             XXXX-XXXX-XXXX
@@ -259,7 +259,7 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-1 w-4 h-6 bg-slate-900 rounded-b-lg shadow-md z-20"></div>
                     </div>
                     <div className="mt-6 bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm text-sm font-bold text-slate-900 animate-bounce">
-                        Spin & Win!
+                        {t('visuals.spinWin')}
                     </div>
                 </Container>
             );
@@ -270,13 +270,13 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                     <div className="flex flex-col items-center w-full max-w-[200px]">
                         {/* Trigger Node */}
                         <div className="bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg shadow-md mb-2 w-full text-center">
-                            Trigger: Birthday 🎂
+                            {t('visuals.triggerBirthday')}
                         </div>
                         <div className="h-4 w-0.5 bg-slate-300 mb-2"></div>
 
                         {/* Condition Node */}
                         <div className="bg-white border border-slate-200 text-slate-600 text-[10px] px-3 py-1.5 rounded-lg shadow-sm mb-2 transform rotate-45 border-dashed">
-                            <div className="transform -rotate-45">Is Card Active?</div>
+                            <div className="transform -rotate-45">{t('visuals.isCardActive')}</div>
                         </div>
                         <div className="flex w-full justify-between items-start px-4">
                             <div className="h-4 w-0.5 bg-slate-300 transform -rotate-12 origin-top"></div>
@@ -286,10 +286,10 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                         {/* Action Nodes */}
                         <div className="flex gap-2 w-full mt-2">
                             <div className="flex-1 bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] p-2 rounded-lg text-center">
-                                Send Points
+                                {t('visuals.sendPoints')}
                             </div>
                             <div className="flex-1 bg-slate-50 border border-slate-100 text-slate-400 text-[10px] p-2 rounded-lg text-center">
-                                End
+                                {t('visuals.end')}
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                             <div className="bg-slate-900 rounded-xl p-3 shadow-xl flex flex-col items-center gap-1.5 transform rotate-6 text-white">
                                 <ShoppingBag size={20} className="text-emerald-400" />
                                 <div className="w-8 h-1 bg-white/10 rounded-full"></div>
-                                <div className="text-[8px] font-bold text-white/30 font-mono">OFFLINE</div>
+                                <div className="text-[8px] font-bold text-white/30 font-mono">{t('bento.omnichannel.connected').toUpperCase()}</div>
                             </div>
                         </div>
 
@@ -329,8 +329,8 @@ const FeatureVisuals: React.FC<FeatureVisualsProps> = ({ featureKey }) => {
                                     <MapPin size={16} />
                                 </div>
                                 <div>
-                                    <div className="text-[10px] font-bold text-slate-900">Store Visit Detected</div>
-                                    <div className="text-[9px] text-slate-500 italic">500m from Main St. Store</div>
+                                    <div className="text-[10px] font-bold text-slate-900">{t('visuals.storeVisit')}</div>
+                                    <div className="text-[9px] text-slate-500 italic">{t('visuals.proximityDesc')}</div>
                                 </div>
                             </div>
                             <div className="mt-3 flex gap-1.5">

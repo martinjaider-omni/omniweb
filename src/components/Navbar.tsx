@@ -28,10 +28,6 @@ const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'es' ? 'en' : 'es';
-    i18n.changeLanguage(newLang);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,7 +89,7 @@ const Navbar: React.FC = () => {
                   {/* Column 1: Core Platform */}
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
-                      Core Platform
+                      {t('nav.megamenu.core')}
                     </div>
                     <div className="space-y-1">
                       <MenuLink
@@ -126,7 +122,7 @@ const Navbar: React.FC = () => {
                   {/* Column 2: Engagement */}
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
-                      Engagement
+                      {t('nav.megamenu.engagement')}
                     </div>
                     <div className="space-y-1">
                       <MenuLink
@@ -153,26 +149,26 @@ const Navbar: React.FC = () => {
                   {/* Column 3: Intelligence */}
                   <div>
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-3">
-                      Intelligence
+                      {t('nav.megamenu.intelligence')}
                     </div>
                     <div className="space-y-1">
                       <MenuLink
                         to="/features/analytics"
                         icon={<BarChart3 size={18} />}
-                        title="Analytics"
-                        desc="Real-time ROI insights"
+                        title={t('features.items.analytics.title')}
+                        desc={t('features.items.analytics.desc')}
                       />
                       <MenuLink
                         to="/features/customer-journey"
                         icon={<Map size={18} />}
-                        title="Journey Builder"
-                        desc="Visual automation flows"
+                        title={t('features.items.journeys.title')}
+                        desc={t('features.items.journeys.desc')}
                       />
                       <MenuLink
                         to="/features/automated-campaigns"
                         icon={<Zap size={18} />}
-                        title="Automated Campaigns"
-                        desc="Trigger-based marketing"
+                        title={t('features.items.campaigns.title')}
+                        desc={t('features.items.campaigns.desc')}
                       />
                       <MenuLink
                         to="/features/ropo"
@@ -211,46 +207,52 @@ const Navbar: React.FC = () => {
                     <MenuLink
                       to="/company"
                       icon={<Users size={18} />}
-                      title="About us"
-                      desc="Our mission & team"
+                      title={t('footer.about')}
+                      desc={t('company.description')}
                     />
                     <MenuLink
                       to="/careers"
                       icon={<Briefcase size={18} />}
-                      title="Careers"
-                      desc="We are hiring"
+                      title={t('footer.careers')}
+                      desc={t('nav.startFree')}
                     />
                     <MenuLink
                       to="/partners"
                       icon={<Handshake size={18} />}
-                      title="Partners"
-                      desc="Grow with us"
+                      title={t('footer.partners')}
+                      desc={t('nav.startFree')}
+                    />
+                    <MenuLink
+                      to="/integrations"
+                      icon={<Zap size={18} />}
+                      title={t('integrations.seeAll')}
+                      desc={t('integrationsPage.hero.subtitle')}
                     />
                     <MenuLink
                       to="/contact"
                       icon={<Headphones size={18} />}
-                      title="Contact"
-                      desc="Get in touch"
+                      title={t('footer.contact')}
+                      desc={t('contact.description')}
                     />
                   </div>
 
                   {/* Right Column (Resources) */}
                   <div className="bg-slate-50 p-6 w-48 border-l border-slate-100">
                     <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
-                      Resources
+                      {t('footer.resources')}
                     </div>
                     <ul className="space-y-3">
                       <li>
-                        <a href="#" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+                        <a href="#" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">{t('footer.blog')}</a>
                       </li>
                       <li>
-                        <Link to="/changelog" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Changelog</Link>
+                        <Link to="/changelog" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">{t('footer.changelog')}</Link>
                       </li>
                       <li>
-                        <Link to="/help" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Help Center</Link>
+                        <Link to="/help" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">{t('footer.help')}</Link>
                       </li>
                       <li>
-                        <Link to="/community" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">Community</Link>
+                        <Link to="/community" className="block text-sm text-slate-600 hover:text-slate-900 transition-colors">{t('footer.community')}</Link>
                       </li>
                     </ul>
                   </div>
@@ -262,20 +264,12 @@ const Navbar: React.FC = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Language Switcher */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-all border border-transparent hover:border-slate-200"
-            >
-              <Globe size={14} />
-              {i18n.language === 'es' ? 'EN' : 'ES'}
-            </button>
 
             <Link
-              to="/login"
-              className="text-sm font-medium text-slate-600 hover:text-slate-900 px-4 py-2"
+              to="/book-demo"
+              className="text-sm font-medium text-slate-800 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 px-4 py-2 rounded-lg transition-all shadow-sm"
             >
-              {t('nav.login')}
+              {t('nav.bookDemo')}
             </Link>
             <Link
               to="/signup"
@@ -314,16 +308,16 @@ const Navbar: React.FC = () => {
           ))}
           <div className="h-px bg-slate-100 my-2"></div>
           <Link
-            to="/login"
+            to="/book-demo"
             className="text-center font-medium text-slate-600 py-3 rounded-md hover:bg-slate-50"
           >
-            Sign in
+            {t('nav.bookDemo')}
           </Link>
           <Link
             to="/signup"
             className="bg-[#255664] text-white text-center font-medium py-3 rounded-lg hover:bg-[#1e4652]"
           >
-            Start for free
+            {t('nav.startFree')}
           </Link>
         </div>
       )}

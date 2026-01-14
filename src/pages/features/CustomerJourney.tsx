@@ -52,7 +52,7 @@ const CustomerJourney: React.FC = () => {
                     <Link to="/signup">
                         <Button size="lg">{t('featureDetail.customerJourney.ctaPrimary')}</Button>
                     </Link>
-                    <Link to="/contact">
+                    <Link to="/book-demo">
                         <Button variant="secondary" size="lg">{t('featureDetail.customerJourney.ctaSecondary')}</Button>
                     </Link>
                 </div>
