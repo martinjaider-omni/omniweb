@@ -283,7 +283,7 @@
                 "desc": "Specialized POS software for the fashion and retail industry."
             },
             "agora": {
-                "desc": "High-performance TPV software for hospitality and retail."
+                "desc": "High-performance POS software for hospitality and retail."
             },
             "a3innuva": {
                 "desc": "Cloud-based ERP and accounting software for business management."
@@ -400,6 +400,14 @@
             "description": "The first 100 activities per month are always free. No credit card required."
         },
         "plans": {
+            "free": {
+                "name": "Free",
+                "desc": "To try the full platform.",
+                "features": {
+                    "all": "All features",
+                    "advanced": "Everything in Advanced"
+                }
+            },
             "starter": {
                 "name": "Starter",
                 "desc": "Ideal for small businesses starting out."
@@ -424,8 +432,8 @@
             "custom": "Custom",
             "everythingIn": "Everything in {{plan}}, plus:",
             "startFree": "Start for free",
-            "talkSales": "Book a Demo",
-            "noCreditCard": "No credit card required. 100 activities free.",
+            "talkSales": "Contact Sales",
+            "noCreditCard": "No credit card. 100 activities free.",
             "unlimitedPush": "Unlimited Push Notif.",
             "customEmails": "Customizable Emails",
             "unlimitedIntegrations": "Unlimited Integrations",
@@ -461,18 +469,27 @@
                 "totalMonthly": "Total Monthly"
             },
             "ranges": {
-                "upTo": "Up to {{count}}",
+                "upTo": "Up to {{count}} activities",
                 "between": "{{start}} to {{end}}",
                 "andUp": "{{count}}+"
             }
         },
         "table": {
             "title": "Compare all features",
-            "subtitle": "Choose the plan that's right for your business",
+            "subtitle": "Choose the right plan for your business",
             "features": "Features",
             "coreFeatures": "Core Features",
             "plusFeatures": "Plus Features",
             "advancedFeatures": "Advanced Features"
+        },
+        "toggle": {
+            "monthly": "Monthly",
+            "annual": "Annual",
+            "discount": "Save 18%"
+        },
+        "cards": {
+            "usage": "Usage",
+            "features": "Features"
         }
     },
     "solutions": {
@@ -677,6 +694,7 @@
         },
         "analytics": {
             "backButton": "Back to Home",
+            "backHome": "Back to Home",
             "title": "Analytics",
             "description": "Measure the true ROI of your loyalty program. Track retention, average order value, and customer lifetime value in real-time.",
             "capabilitiesTitle": "Key Capabilities",
@@ -686,11 +704,20 @@
                 "Redemption rate analysis",
                 "Cohort retention charts"
             ],
+            "capabilityItems": [
+                "Real-time ROI tracking",
+                "Customer Lifetime Value (LTV)",
+                "Redemption rate analysis",
+                "Cohort retention charts"
+            ],
             "whyTitle": "Why it matters",
             "whyDesc": "Data-driven loyalty programs grow 2.5x faster. Understand exactly what rewards drive behaviour.",
             "plansNote": "Included in Plus & Advanced plans",
+            "plans": "Included in Plus & Advanced plans",
             "ctaFree": "Start for free",
-            "ctaSales": "Contact Sales"
+            "ctaPrimary": "Start for free",
+            "ctaSales": "Contact Sales",
+            "ctaSecondary": "Contact Sales"
         },
         "customerJourney": {
             "backButton": "Back to Home",
@@ -708,6 +735,27 @@
             "plansNote": "Available in Advanced plan",
             "ctaFree": "Start for free",
             "ctaSales": "Contact Sales"
+        }
+    },
+    "signup": {
+        "title": "Create your free account",
+        "subtitle": "Start with 100 free activities per month. No credit card required.",
+        "google": "Continue with Google",
+        "email": "Email address",
+        "password": "Password",
+        "name": "Full name",
+        "company": "Company name",
+        "submit": "Create account",
+        "login": "Already have an account?",
+        "loginLink": "Log in",
+        "terms": "By signing up, you agree to our",
+        "termsLink": "Terms of Service",
+        "privacy": "and",
+        "privacyLink": "Privacy Policy",
+        "testimonial": {
+            "quote": "Omniwallet has completely transformed our loyalty strategy. It's intuitive, powerful, and our customers love it.",
+            "author": "Sofia Martinez",
+            "role": "Marketing Director, FashionRetail"
         }
     }
 }

@@ -14,25 +14,25 @@
         }
     },
     "hero": {
-        "badge": "Nuevo: Omniwallet 3.0 ya está disponible",
-        "title": "La plataforma de loyalty omnicanal que conecta datos, clientes y ventas reales.",
+        "badge": "Nuevo: Omniwallet 3.0 ya disponible",
+        "title": "Plataforma de fidelización omnicanal y CDP",
         "subtitleItems": [
-            "Programa de puntos",
-            "Tarjetas Wallet",
-            "Niveles de cliente",
+            "Puntos",
+            "Wallet",
+            "Niveles VIP",
             "Referidos",
             "Recompensas",
-            "Notificaciones push",
-            "Campañas avanzadas",
-            "Customer journeys",
-            "Analítica",
+            "Push",
+            "Campañas",
+            "Journeys",
+            "Analytics",
             "ROPO"
         ],
-        "description": "La plataforma todo en uno para crear, gestionar y escalar programas de fidelización de clientes online, offline y omnicanal con pases digitales para Apple Wallet y Google Wallet.",
+        "description": "Somos la plataforma que recopila toda la información online y offline de tu cliente y permite crear campañas e incentivos basados en fidelización para aumentar la recurrencia de compra.",
         "ctaPrimary": "Empezar gratis",
-        "ctaSecondary": "Reservar Demo",
+        "ctaSecondary": "Agendar Demo",
         "noCreditCard": "Sin tarjeta de crédito",
-        "freeTrial": "100 actividades de prueba gratis"
+        "freeTrial": "100 actividades gratis"
     },
     "footer": {
         "description": "La plataforma líder para programas de fidelización en billeteras móviles. Crea, gestiona y escala tus pases digitales.",
@@ -65,8 +65,8 @@
     "home": {
         "featureTabs": {
             "header": {
-                "title": "Todo lo que necesitas para construir <br />un programa de fidelización de clase mundial.",
-                "subtitle": "Omniwallet te ofrece las piezas fundamentales para crear experiencias de fidelización potentes, pensadas para el móvil y sin escribir una sola línea de código."
+                "title": "Todo lo que necesitas para crear <br />un programa de fidelización de clase mundial.",
+                "subtitle": "Omniwallet te da todas las herramientas para crear experiencias de fidelización potentes, mobile-first y sin escribir ni una línea de código."
             },
             "cta": {
                 "learnMore": "Saber más sobre {{feature}}",
@@ -74,54 +74,54 @@
             },
             "items": {
                 "points": [
-                    "Tasas de cambio configurables",
-                    "Funcionalidad de cashback",
-                    "Generación dinámica de puntos"
+                    "Configura tasas de cambio a tu medida",
+                    "Cashback automático",
+                    "Puntos dinámicos por comportamiento"
                 ],
                 "wallet": [
-                    "Soporte nativo Apple y Google Wallet",
-                    "Instalación sin fricción",
-                    "Actualizaciones dinámicas en tiempo real"
+                    "Compatible con Apple y Google Wallet",
+                    "Instalación en 2 clics",
+                    "Actualizaciones en tiempo real"
                 ],
                 "tiers": [
-                    "Progresión automatizada",
-                    "Recompensas exclusivas de nivel",
-                    "Reglas de degradación reversibles"
+                    "Progresión automática de niveles",
+                    "Beneficios exclusivos por nivel",
+                    "Degradación inteligente y reversible"
                 ],
                 "market": [
-                    "Recompensas físicas y digitales",
-                    "Cumplimiento automatizado",
-                    "Pools de cupones"
+                    "Premios físicos y digitales",
+                    "Entrega automatizada",
+                    "Gestión de cupones"
                 ],
                 "push": [
-                    "Triggers de geolocalización",
-                    "Integración con pases de Wallet",
-                    "Mensajería segmentada"
+                    "Notificaciones por geolocalización",
+                    "Integrado en el pase digital",
+                    "Segmentación avanzada"
                 ],
                 "gamification": [
-                    "Ruletas de premios personalizables",
-                    "Control de probabilidad",
-                    "Integración de premios de alto valor"
+                    "Ruletas totalmente personalizables",
+                    "Controla las probabilidades",
+                    "Premios de alto valor"
                 ],
                 "automation": [
-                    "Automatización de recuperación",
-                    "Triggers de cumpleaños",
-                    "Ejecución en tiempo real"
+                    "Recupera clientes inactivos",
+                    "Campañas de cumpleaños",
+                    "Ejecución instantánea"
                 ],
                 "analytics": [
-                    "Dashboards de ROI en tiempo real",
-                    "Análisis de cohortes",
-                    "Informes exportables"
+                    "ROI en tiempo real",
+                    "Análisis por cohortes",
+                    "Reportes exportables"
                 ],
                 "journey": [
-                    "Constructor de flujos visual",
-                    "Triggers basados en ubicación",
-                    "Tests AB"
+                    "Editor visual drag & drop",
+                    "Activadores por ubicación",
+                    "A/B testing integrado"
                 ],
                 "ropo": [
-                    "Atribución de ventas offline",
-                    "Cupones geovallados",
-                    "Medición de tráfico en tienda"
+                    "Atribución online-to-offline",
+                    "Cupones por proximidad",
+                    "Mide el tráfico a tienda"
                 ]
             }
         }
@@ -130,23 +130,23 @@
         "title": "Con la confianza de minoristas innovadores de todo el mundo"
     },
     "testimonials": {
-        "title": "Amado por marcas innovadoras.",
-        "subtitle": "No solo lo decimos nosotros. Esto es lo que dicen los equipos de producto.",
+        "title": "Marcas innovadoras confían en nosotros.",
+        "subtitle": "No te fíes solo de nuestra palabra. Esto es lo que dicen nuestros clientes.",
         "items": [
             {
-                "quote": "Omniwallet transformó completamente la forma en que manejamos nuestro programa de fidelización. La integración con Apple Wallet es perfecta y a nuestros clientes les encanta.",
+                "quote": "Omniwallet cambió por completo cómo gestionamos nuestro programa de fidelización. La integración con Apple Wallet funciona perfecta y nuestros clientes están encantados.",
                 "author": "Sarah Jenkins",
                 "role": "Directora de Marketing",
                 "company": "Acme Corp"
             },
             {
-                "quote": "Vimos un aumento del 40% en la retención en los primeros 3 meses. Los activadores por geolocalización son un cambio de juego para el tráfico en tienda.",
+                "quote": "Aumentamos un 40% la retención en solo 3 meses. Las notificaciones por geolocalización son un game-changer para atraer tráfico a tienda.",
                 "author": "David Chen",
                 "role": "Product Owner",
                 "company": "GlobalRetail"
             },
             {
-                "quote": "Finalmente, una plataforma de fidelización que no parece software antiguo. La API es un sueño para trabajar y el soporte es estelar.",
+                "quote": "Por fin, una plataforma de fidelización que no parece del siglo pasado. La API es un placer trabajar con ella y el soporte es excepcional.",
                 "author": "Elena Rodriguez",
                 "role": "CTO",
                 "company": "TechStore"
@@ -184,17 +184,17 @@
         }
     },
     "bento": {
-        "title": "Diseñado para el minorista moderno.",
-        "subtitle": "Integrando sin fisuras ubicaciones físicas con recompensas digitales.",
+        "title": "Diseñado para el retail moderno.",
+        "subtitle": "Conecta sin esfuerzo tus tiendas físicas con recompensas digitales.",
         "omnichannel": {
-            "title": "Listo para la Omnicanalidad",
-            "desc": "Funciona con tu TPV en tienda y tu plataforma de e-commerce online. Una única fuente de verdad para los datos de tus clientes.",
+            "title": "100% Omnicanal",
+            "desc": "Funciona con tu TPV en tienda y tu ecommerce online. Una única fuente de verdad para todos los datos de tus clientes.",
             "connected": "Integraciones Conectadas",
-            "synced": "Todos los sistemas sincronizados"
+            "synced": "Todo sincronizado"
         },
         "mobile": {
             "title": "Experiencia Móvil Nativa",
-            "desc": "¿Por qué crear una app cuando puedes vivir en el SO? Apple Wallet y Google Wallet están preinstalados en el 99% de los dispositivos.",
+            "desc": "¿Para qué crear una app si puedes vivir en el sistema operativo? Apple Wallet y Google Wallet vienen preinstalados en el 99% de los móviles.",
             "push": "Notificaciones Push",
             "location": "Alertas por Ubicación",
             "updates": "Actualizaciones Automáticas",
@@ -202,17 +202,17 @@
         },
         "rewards": {
             "title": "Recompensas Dinámicas",
-            "desc": "Cambia las ofertas al instante según el nivel, gasto o comportamiento sin actualizar el pase."
+            "desc": "Cambia las ofertas al instante según nivel, gasto o comportamiento. Sin actualizar el pase."
         },
         "viral": {
-            "title": "Bucles de Referidos Virales",
-            "desc": "Convierte a tus mejores clientes en defensores. Enlaces de referidos integrados en cada pase."
+            "title": "Referidos Virales",
+            "desc": "Convierte a tus mejores clientes en embajadores. Enlaces de referido integrados en cada pase."
         }
     },
     "integrations": {
         "title": "Conecta con todo tu",
-        "subtitle": "stack tecnológico.",
-        "description": "Omniwallet se integra sin problemas con las herramientas que ya utilizas. Sincroniza datos de clientes, dispara automatizaciones y gestiona recompensas en tus tiendas físicas y digitales.",
+        "subtitle": "ecosistema tecnológico.",
+        "description": "Omniwallet se integra perfectamente con las herramientas que ya usas. Sincroniza datos de clientes, activa automatizaciones y gestiona recompensas en tus tiendas físicas y online.",
         "categories": {
             "ecommerce": "E-Commerce",
             "pos": "TPV y ERP",
@@ -308,29 +308,29 @@
         }
     },
     "cta": {
-        "title": "¿Listo para transformar tu fidelización?",
-        "subtitle": "Únete a cientos de marcas que ya están aumentando su recurrencia con Omniwallet.",
-        "startFree": "Empezar gratis hoy",
-        "talkSales": "Reservar Demo",
+        "title": "¿Listo para revolucionar tu fidelización?",
+        "subtitle": "Únete a cientos de marcas que ya están multiplicando su recurrencia con Omniwallet.",
+        "startFree": "Empezar gratis",
+        "talkSales": "Agendar Demo",
         "noCreditCard": "Sin tarjeta de crédito. 100 actividades gratis."
     },
     "features": {
         "hero": {
-            "badge": "Plataforma de fidelización todo en uno",
+            "badge": "Plataforma todo-en-uno",
             "title": "Todo lo que necesitas para",
             "subtitle": "dominar la fidelización digital",
-            "description": "Omniwallet proporciona la infraestructura completa para crear, gestionar y escalar programas de fidelización en Apple Wallet y Google Wallet que los clientes realmente usan.",
+            "description": "Omniwallet te da la infraestructura completa para crear, gestionar y escalar programas de fidelización en Apple Wallet y Google Wallet que tus clientes realmente usarán.",
             "startFree": "Empezar gratis",
             "viewPricing": "Ver precios"
         },
         "sections": {
             "core": {
-                "title": "Funcionalidades Esenciales",
-                "description": "Herramientas esenciales incluidas en todos los planes para construir un programa de fidelización potente"
+                "title": "Funcionalidades Core",
+                "description": "Todo lo esencial incluido en todos los planes para crear un programa de fidelización potente"
             },
             "advanced": {
                 "title": "Funcionalidades Avanzadas",
-                "description": "Capacidades avanzadas para llevar tu programa de fidelización al siguiente nivel"
+                "description": "Lleva tu programa de fidelización al siguiente nivel"
             }
         },
         "items": {
@@ -387,10 +387,10 @@
                 "desc": "Conecta la investigación online con compras físicas."
             }
         },
-        "learnMore": "Saber más",
+        "learnMore": "Más info",
         "ready": {
-            "title": "¿Listo para transformar tu programa de fidelización?",
-            "subtitle": "Únete a miles de empresas que usan Omniwallet para construir relaciones duraderas con sus clientes."
+            "title": "¿Listo para revolucionar tu fidelización?",
+            "subtitle": "Únete a miles de negocios que usan Omniwallet para crear relaciones duraderas con sus clientes."
         }
     },
     "pricing": {
@@ -400,13 +400,21 @@
             "description": "Las primeras 100 actividades al mes son siempre gratis. Sin tarjeta de crédito."
         },
         "plans": {
+            "free": {
+                "name": "Gratis",
+                "desc": "Para probar la plataforma al completo.",
+                "features": {
+                    "all": "Todas las funcionalidades",
+                    "advanced": "Todo lo del plan Advanced"
+                }
+            },
             "starter": {
                 "name": "Starter",
-                "desc": "Ideal para pequeños negocios que están empezando."
+                "desc": "Perfecto para pequeños negocios que están empezando."
             },
             "plus": {
                 "name": "Plus",
-                "desc": "Para negocios en crecimiento que necesitan estructura."
+                "desc": "Para negocios en crecimiento que necesitan más potencia."
             },
             "advanced": {
                 "name": "Advanced",
@@ -415,7 +423,7 @@
             "enterprise": {
                 "name": "Enterprise",
                 "price": "Personalizado",
-                "desc": "Para grandes organizaciones con necesidades a medida."
+                "desc": "Para grandes organizaciones con necesidades únicas."
             }
         },
         "labels": {
@@ -424,8 +432,8 @@
             "custom": "Personalizado",
             "everythingIn": "Todo lo de {{plan}}, más:",
             "startFree": "Empezar gratis",
-            "talkSales": "Reservar Demo",
-            "noCreditCard": "Sin tarjeta de crédito. 100 actividades gratis.",
+            "talkSales": "Contactar con Ventas",
+            "noCreditCard": "Sin tarjeta. 100 actividades gratis.",
             "unlimitedPush": "Notif. Push Ilimitadas",
             "customEmails": "Emails Personalizables",
             "unlimitedIntegrations": "Integraciones Ilimitadas",
@@ -461,7 +469,7 @@
                 "totalMonthly": "Total Mensual"
             },
             "ranges": {
-                "upTo": "Hasta {{count}}",
+                "upTo": "Hasta {{count}} actividades",
                 "between": "{{start}} a {{end}}",
                 "andUp": "{{count}}+"
             }
@@ -473,6 +481,15 @@
             "coreFeatures": "Funcionalidades Core",
             "plusFeatures": "Funcionalidades Plus",
             "advancedFeatures": "Funcionalidades Advanced"
+        },
+        "toggle": {
+            "monthly": "Mensual",
+            "annual": "Anual",
+            "discount": "Ahorra 18%"
+        },
+        "cards": {
+            "usage": "Uso",
+            "features": "Funcionalidades"
         }
     },
     "solutions": {
@@ -519,27 +536,27 @@
     "featureDetail": {
         "ropo": {
             "title": "ROPO (Research Online, Purchase Offline)",
-            "description": "Conecte sus esfuerzos de marketing digital con las ventas en el mundo real. Entienda cómo sus clientes investigan en línea y terminan comprando en sus tiendas físicas.",
+            "description": "Conecta tus esfuerzos de marketing digital con ventas reales en tienda. Entiende cómo tus clientes investigan online y acaban comprando en tus tiendas físicas.",
             "mainFeature": {
-                "title": "Estrategia Omnicanal Real",
-                "description": "Omniwallet permite una integración perfecta entre la navegación web y la experiencia en tienda física a través de pases digitales dinámicos."
+                "title": "Estrategia Omnicanal de Verdad",
+                "description": "Omniwallet integra perfectamente la navegación web con la experiencia en tienda física a través de pases digitales dinámicos."
             },
             "capabilities": [
                 {
                     "title": "Atribución Directa",
-                    "description": "Sepa exactamente qué campaña digital llevó al cliente a su punto de venta físico."
+                    "description": "Sabe exactamente qué campaña digital llevó al cliente a tu punto de venta físico."
                 },
                 {
-                    "title": "Cupones de Proximidad",
-                    "description": "Envíe notificaciones automáticas cuando un cliente que ha investigado un producto esté cerca de su tienda."
+                    "title": "Cupones por Proximidad",
+                    "description": "Envía notificaciones automáticas cuando un cliente que ha investigado un producto esté cerca de tu tienda."
                 },
                 {
-                    "title": "Medición de Conversión Offline",
-                    "description": "Mida el tráfico a tienda impulsado por sus canales digitales con precisión quirúrgica."
+                    "title": "Conversión Offline",
+                    "description": "Mide el tráfico a tienda generado por tus canales digitales con precisión quirúrgica."
                 },
                 {
-                    "title": "Experiencia unificada",
-                    "description": "Mantenga la coherencia de marca y beneficios sin importar dónde elija comprar el cliente."
+                    "title": "Experiencia Unificada",
+                    "description": "Mantén la coherencia de marca y beneficios sin importar dónde compre el cliente."
                 }
             ],
             "cta": {
@@ -550,48 +567,48 @@
         },
         "walletCards": {
             "title": "Tarjetas de Fidelización en Wallet",
-            "description": "El corazón de un programa de fidelización moderno. Sin aplicaciones que descargar, sin tarjetas de plástico que llevar. Una experiencia sin fricciones en Apple y Google Wallet.",
+            "description": "El corazón de un programa de fidelización moderno. Sin apps que descargar, sin tarjetas de plástico que llevar. Experiencia sin fricciones en Apple y Google Wallet.",
             "nativeTitle": "Wallets Móviles Nativas",
             "nativeDesc": "Aprovecha las wallets nativas ya instaladas en el 99% de los smartphones. Apple Wallet y Google Wallet son confiables, seguras y siempre accesibles.",
             "updatesTitle": "Actualizaciones en Tiempo Real",
-            "updatesDesc": "El saldo de puntos, el nivel de estatus y los cupones se actualizan al instante en la tarjeta. Mantén a los clientes informados sin que tengan que revisar una app.",
-            "frictionlessTitle": "Instalación Sin Fricciones",
-            "frictionlessDesc": "Los clientes pueden añadir su tarjeta mediante código QR, enlace SMS, email o un toque en tu app actual. La instalación en 2 clics aumenta las tasas de adopción hasta 5 veces.",
+            "updatesDesc": "Saldo de puntos, nivel y cupones se actualizan al instante en la tarjeta. Mantén a tus clientes informados sin que tengan que abrir ninguna app.",
+            "frictionlessTitle": "Instalación en 2 Clics",
+            "frictionlessDesc": "Tus clientes añaden su tarjeta con código QR, SMS, email o un toque en tu app. La instalación instantánea multiplica por 5 la tasa de adopción.",
             "ctaTitle": "Deja de crear apps que nadie descarga.",
-            "ctaDesc": "Cámbiate a las Tarjetas de Fidelización en Wallet y conecta con tus clientes donde realmente prestan atención.",
+            "ctaDesc": "Pásate a las Tarjetas de Fidelización en Wallet y conecta con tus clientes donde realmente prestan atención.",
             "ctaButton": "Crea tu Primera Tarjeta"
         },
         "pointsProgram": {
             "title": "Programas de Puntos Avanzados",
-            "description": "Diseña tu propio sistema de recompensas con total libertad. Adáptalo a tu modelo de negocio, objetivos comerciales y comportamiento real del cliente.",
-            "configTitle": "Configurabilidad Total",
-            "configDesc": "Lejos de esquemas rígidos, Omniwallet ofrece un sistema flexible y dinámico donde los puntos se convierten en una herramienta estratégica.",
+            "description": "Diseña tu propio sistema de recompensas con total libertad. Adáptalo a tu modelo de negocio, objetivos comerciales y comportamiento real de tus clientes.",
+            "configTitle": "Configuración Total",
+            "configDesc": "Olvida esquemas rígidos. Omniwallet te da un sistema flexible y dinámico donde los puntos se convierten en una herramienta estratégica.",
             "configItems": [
                 "Define tasas de cambio precisas de puntos por euro.",
-                "Establece valores de canje para los puntos.",
-                "Usa los puntos como cashback directo en futuras compras.",
-                "Ajusta los valores para campañas o segmentos específicos."
+                "Establece valores de canje personalizados.",
+                "Usa los puntos como cashback directo.",
+                "Ajusta valores para campañas o segmentos específicos."
             ],
-            "dynamicTitle": "Generación Dinámica de Puntos",
-            "dynamicDesc": "Los puntos no son fijos. Modifícalos basándote en:",
+            "dynamicTitle": "Puntos Dinámicos",
+            "dynamicDesc": "Los puntos no son fijos. Modifícalos según:",
             "dynamicItems": {
-                "transaction": "Detalles de transacción: Producto, categoría, importe, margen.",
-                "moments": "Momentos Clave: Campañas estacionales, Black Friday, Rebajas.",
-                "user": "Datos de Usuario: Cumpleaños, nivel de tier, historial."
+                "transaction": "Transacción: Producto, categoría, importe, margen.",
+                "moments": "Momentos Clave: Campañas, Black Friday, Rebajas.",
+                "user": "Cliente: Cumpleaños, nivel VIP, historial."
             },
             "ctaTitle": "¿Listo para lanzar tu programa de puntos?",
             "ctaButton": "Empezar ahora"
         },
         "customerTiers": {
-            "title": "Niveles de Cliente (Tiers)",
-            "description": "Segmenta y recompensa a los clientes basándote en su valor real a lo largo del tiempo. Crea un camino de progresión claro y motivador.",
+            "title": "Niveles VIP (Tiers)",
+            "description": "Segmenta y recompensa a tus clientes según su valor real a lo largo del tiempo. Crea un camino de progresión claro y motivador.",
             "smartTitle": "Segmentación Inteligente",
-            "smartDesc": "Define multiplicadores para la obtención de puntos según el nivel del usuario. Ofrece recompensas exclusivas y ventajas como puntos que nunca caducan para los niveles superiores.",
-            "progressionTitle": "Progresión Automatizada",
-            "progressionDesc": "Los niveles están totalmente integrados con los flujos de trabajo. Los beneficios se aplican automáticamente en cada transacción, online y offline.",
-            "statusTitle": "Estatus Dinámico",
+            "smartDesc": "Define multiplicadores de puntos según el nivel del cliente. Ofrece beneficios exclusivos como puntos que nunca caducan para tus mejores clientes.",
+            "progressionTitle": "Progresión Automática",
+            "progressionDesc": "Los niveles están totalmente integrados con tus flujos de trabajo. Los beneficios se aplican automáticamente en cada transacción, online y offline.",
+            "statusTitle": "Niveles Dinámicos",
             "statusDesc": "Implementa reglas de degradación reversibles por inactividad para fomentar la recurrencia sin penalizar permanentemente al cliente.",
-            "ctaTitle": "Construye un sistema de niveles flexible y justo",
+            "ctaTitle": "Crea un sistema de niveles flexible y justo",
             "ctaButton": "Empezar a Crear Niveles"
         },
         "loyaltyMarket": {
@@ -644,39 +661,40 @@
         },
         "gamification": {
             "title": "Gamificación",
-            "description": "Ruedas de premios avanzadas para aumentar el compromiso. Transforma las acciones cotidianas en experiencias lúdicas.",
+            "description": "Ruletas de premios avanzadas para disparar el engagement. Transforma acciones cotidianas en experiencias lúdicas.",
             "controlTitle": "Control Total",
-            "controlDesc": "Establece fechas activas, límites de participación y costes (gratis vs. puntos). Controla la probabilidad de cada resultado.",
+            "controlDesc": "Define fechas activas, límites de participación y coste (gratis vs. puntos). Controla la probabilidad de cada premio.",
             "customTitle": "Personalización Total",
-            "customDesc": "Adapta completamente el aspecto visual a tu marca. Colores, fuentes e imágenes son configurables.",
+            "customDesc": "Adapta el diseño 100% a tu marca. Colores, fuentes e imágenes totalmente configurables.",
             "strategicTitle": "Integración Estratégica",
-            "strategicDesc": "Activa las ruedas después de una compra, registro o subida de nivel. No es solo un juego, es una herramienta de negocio.",
+            "strategicDesc": "Activa las ruletas tras una compra, registro o subida de nivel. No es solo un juego, es una herramienta de negocio.",
             "spinWin": "Gira y\nGana",
-            "footerDesc": "Combina recompensas inmediatas (puntos, productos digitales) con premios de alto valor. Aumenta la motivación, reactiva usuarios dormidos y aumenta la frecuencia de compra.",
+            "footerDesc": "Combina recompensas instantáneas (puntos, productos digitales) con premios de alto valor. Aumenta motivación, reactiva usuarios inactivos y multiplica la frecuencia de compra.",
             "ctaButton": "Gamifica tu Programa"
         },
         "automatedCampaigns": {
             "title": "Campañas Automatizadas",
-            "description": "Convierte los datos en acción. Construye una lógica de fidelización completamente automatizada basada en el comportamiento real del cliente y las transacciones.",
+            "description": "Convierte datos en acción. Crea lógica de fidelización 100% automatizada basada en comportamiento real y transacciones.",
             "acquisition": "Adquisición",
-            "acquisitionDesc": "Recompensas de bienvenida y bonos por primera compra para acelerar la conversión inicial.",
-            "retention": "Fidelización",
-            "retentionDesc": "Campañas de recuperación, recompensas de cumpleaños y bonos por racha para mantener vivas las relaciones.",
+            "acquisitionDesc": "Recompensas de bienvenida y bonos por primera compra para acelerar la conversión.",
+            "retention": "Retención",
+            "retentionDesc": "Campañas de recuperación, premios de cumpleaños y bonos por racha para mantener viva la relación.",
             "growth": "Crecimiento",
-            "growthDesc": "Recompensas por gasto y hitos de nivel para aumentar el ticket medio y el valor del cliente.",
+            "growthDesc": "Recompensas por gasto e hitos de nivel para aumentar ticket medio y valor del cliente.",
             "traffic": "Tráfico",
-            "trafficDesc": "Bonos por día de la semana y ofertas por tiempo limitado para equilibrar la demanda.",
+            "trafficDesc": "Bonos por día de la semana y ofertas flash para equilibrar la demanda.",
             "orchestrationTitle": "Orquestación en Tiempo Real",
-            "orchestrationDesc": "Omniwallet decide automáticamente si una recompensa aplica, qué incentivo dar, el importe y las condiciones; todo en el momento exacto de la transacción.",
+            "orchestrationDesc": "Omniwallet decide automáticamente si aplica una recompensa, qué incentivo dar, el importe y las condiciones. Todo en el momento exacto de la transacción.",
             "orchestrationItems": [
-                "Sin necesidad de desarrollo técnico",
+                "Sin desarrollo técnico",
                 "Plantillas listas para usar",
-                "Controles de rentabilidad (gasto mínimo, puntos máximos)"
+                "Controles de rentabilidad (gasto mín, puntos máx)"
             ],
             "ctaButton": "Automatiza tu Marketing"
         },
         "analytics": {
             "backButton": "Volver al inicio",
+            "backHome": "Volver al inicio",
             "title": "Analítica",
             "description": "Mide el ROI real de tu programa de fidelización. Realiza un seguimiento de la retención, el valor medio del pedido y el valor de vida del cliente en tiempo real.",
             "capabilitiesTitle": "Capacidades Clave",
@@ -686,11 +704,20 @@
                 "Análisis de tasa de canje",
                 "Gráficos de retención por cohorte"
             ],
+            "capabilityItems": [
+                "Seguimiento de ROI en tiempo real",
+                "Valor de Vida del Cliente (LTV)",
+                "Análisis de tasa de canje",
+                "Gráficos de retención por cohorte"
+            ],
             "whyTitle": "Por qué es importante",
             "whyDesc": "Los programas de fidelización basados en datos crecen 2.5 veces más rápido. Entiende exactamente qué recompensas impulsan el comportamiento.",
             "plansNote": "Incluido en los planes Plus y Advanced",
+            "plans": "Incluido en los planes Plus y Advanced",
             "ctaFree": "Empezar gratis",
-            "ctaSales": "Contactar con Ventas"
+            "ctaPrimary": "Empezar gratis",
+            "ctaSales": "Contactar con Ventas",
+            "ctaSecondary": "Contactar con Ventas"
         },
         "customerJourney": {
             "backButton": "Volver al inicio",
@@ -708,6 +735,27 @@
             "plansNote": "Disponible en el plan Advanced",
             "ctaFree": "Empezar gratis",
             "ctaSales": "Contactar con Ventas"
+        }
+    },
+    "signup": {
+        "title": "Crea tu cuenta gratis",
+        "subtitle": "Empieza con 100 actividades gratuitas al mes. Sin tarjeta de crédito.",
+        "google": "Continuar con Google",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "name": "Nombre completo",
+        "company": "Nombre de la empresa",
+        "submit": "Crear cuenta",
+        "login": "¿Ya tienes cuenta?",
+        "loginLink": "Inicia sesión",
+        "terms": "Al registrarte, aceptas nuestros",
+        "termsLink": "Términos y Condiciones",
+        "privacy": "y",
+        "privacyLink": "Política de Privacidad",
+        "testimonial": {
+            "quote": "Omniwallet ha transformado completamente nuestra estrategia de fidelización. Es intuitivo, potente y a nuestros clientes les encanta.",
+            "author": "Sofia Martinez",
+            "role": "Directora de Marketing, ModaRetail"
         }
     }
 }

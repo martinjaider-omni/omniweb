@@ -19,6 +19,7 @@ import AutomatedCampaigns from './pages/features/AutomatedCampaigns';
 import Analytics from './pages/features/Analytics';
 import CustomerJourney from './pages/features/CustomerJourney';
 import ROPO from './pages/features/ROPO';
+import Signup from './pages/Signup';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -33,7 +34,9 @@ const App: React.FC = () => {
           <Route path="pricing" element={<PricingPage />} />
           <Route path="company" element={<CompanyPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="contact" element={<ContactPage />} />
           <Route path="integrations" element={<IntegrationsPage />} />
+          <Route path="signup" element={<Signup />} />
 
           {/* Feature Detail Pages */}
           <Route path="features/wallet-cards" element={<WalletCards />} />
